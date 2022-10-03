@@ -6,6 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
-
+extension CGColor {
+    
+    func asUIColor()-> UIColor{
+        UIColor(cgColor: self)
+    }
+    
+}
 

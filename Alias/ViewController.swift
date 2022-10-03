@@ -20,15 +20,20 @@ class ViewController: UIPageViewController {
         c1.view.backgroundColor = .red
         
         let c2 = UIViewController()
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
-        gradient.type = .axial
-        gradient.frame = c2.view.bounds
-        gradient.startPoint = CGPoint(x: 0, y: 1)
-        gradient.endPoint = CGPoint(x: 1, y: 1)
+        let textview = UITextView()
+        textview.frame = CGRect(x: 0, y: 0, width: 300, height: 100)
+        textview.translatesAutoresizingMaskIntoConstraints = false
+        textview.textColor = .white
+        textview.backgroundColor = .brown
+        c2.view.addSubview(textview)
+        textview.center = c2.view.center
         
-        c2.view.layer.addSublayer(gradient)
+        DispatchQueue.main.async {
+            sleep(3)
+            changeLocalization(localization: .Russian)
+        }
         
+            
         changeLocalization(localization: .English)
         print("Welcome".localized())
         

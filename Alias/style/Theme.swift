@@ -23,6 +23,8 @@ fileprivate protocol ColorProvider {
     var subtleRed: CGColor { get }
     var subtleGreen: CGColor { get }
     var SecondWhite: CGColor { get }
+    var subtlePink: CGColor { get }
+    var subtlePurple: CGColor { get }
 }
 
 enum AppColor {
@@ -33,22 +35,28 @@ enum AppColor {
     case subtleRed
     case subtleGreen
     case SecondWhite
+    case subtlePink
+    case subtlePurple
 }
 
 fileprivate class LightThemeColorProvider: ColorProvider {
-    var nordDark: CGColor = CGColor(red: 46, green: 52, blue: 64, alpha: 1.0)
+    var nordDark: CGColor = CGColor(red: 46/255, green: 52/255, blue: 64/255, alpha: 1.0)
     
-    var subtleWhite: CGColor = CGColor(red: 221, green: 221, blue: 221, alpha: 1.0)
+    var subtleWhite: CGColor = CGColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1.0)
     
-    var darkOutline: CGColor = CGColor(red: 55, green: 63, blue: 71, alpha: 1.0)
+    var darkOutline: CGColor = CGColor(red: 55/255, green: 63/255, blue: 71/255, alpha: 1.0)
     
-    var darkBlue: CGColor = CGColor(red: 86, green: 100, blue: 128, alpha: 1.0)
+    var darkBlue: CGColor = CGColor(red: 86/255, green: 100/255, blue: 128/255, alpha: 1.0)
     
-    var subtleRed: CGColor = CGColor(red: 185, green: 81, blue: 91, alpha: 1.0)
+    var subtleRed: CGColor = CGColor(red: 185/255, green: 81/255, blue: 91/255, alpha: 1.0)
     
-    var subtleGreen: CGColor = CGColor(red: 121, green: 161, blue: 87, alpha: 1.0)
+    var subtleGreen: CGColor = CGColor(red: 121/255, green: 161/255, blue: 87/255, alpha: 1.0)
     
-    var SecondWhite: CGColor = CGColor(red: 255, green: 236, blue: 240, alpha: 1.0)
+    var SecondWhite: CGColor = CGColor(red: 255/255, green: 236/255, blue: 240/255, alpha: 1.0)
+    
+    var subtlePink: CGColor = CGColor(red: 243/255, green: 94/255, blue: 84/255, alpha: 1)
+    
+    var subtlePurple: CGColor = CGColor(red: 146/255, green: 88/255, blue: 106/255, alpha: 1)
 }
 
 fileprivate class DarkThemeColorProvider {
@@ -83,6 +91,10 @@ class GlobalColorProvider{
             return colorProvider.subtleGreen
         case .SecondWhite:
             return colorProvider.SecondWhite
+        case .subtlePurple:
+            return colorProvider.subtlePurple
+        case .subtlePink:
+            return colorProvider.subtlePink
         }
         
     }

@@ -9,6 +9,8 @@ import Foundation
 
 fileprivate var appLocalization: Localization = UserDefaults.standard.localization
 
+var localizationLiveData: LiveData<Localization> = LiveData(initialData: UserDefaults.standard.localization)
+
 enum Localization: String {
     case Georgian = "ka"
     case English = "en"
@@ -36,6 +38,7 @@ fileprivate extension UserDefaults {
 func changeLocalization(localization: Localization){
     UserDefaults.standard.localization = localization
     appLocalization = localization
+    if localizationLiveData.data != localization{ localizationLiveData.setData(data: localization) }
 }
 
 

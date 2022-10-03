@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95750B4E28EAFEFB007CB897 /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95750B4D28EAFEFB007CB897 /* LiveData.swift */; };
+		95750B5028EAFF16007CB897 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95750B4F28EAFF16007CB897 /* Observable.swift */; };
+		95750B5228EAFF1F007CB897 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95750B5128EAFF1F007CB897 /* Observer.swift */; };
+		95750B5628EB04C9007CB897 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95750B5528EB04C9007CB897 /* HomeScreenController.swift */; };
+		95750B5928EB04E0007CB897 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95750B5828EB04E0007CB897 /* BaseViewController.swift */; };
+		95750B5C28EB0886007CB897 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95750B5B28EB0886007CB897 /* PaddingLabel.swift */; };
+		95750B5F28EB1F07007CB897 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 95750B5E28EB1F07007CB897 /* iOSDropDown */; };
+		95756B9428EAE6300087A408 /* Graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95756B9328EAE6300087A408 /* Graphics.swift */; };
 		9578205528E6E73E004C1CE4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578205428E6E73E004C1CE4 /* Theme.swift */; };
 		9578205C28E6F5F3004C1CE4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9578205E28E6F5F3004C1CE4 /* Localizable.strings */; };
 		9578206328E6F7BC004C1CE4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578206228E6F7BC004C1CE4 /* Extensions.swift */; };
@@ -24,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95750B4D28EAFEFB007CB897 /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
+		95750B4F28EAFF16007CB897 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		95750B5128EAFF1F007CB897 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		95750B5528EB04C9007CB897 /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
+		95750B5828EB04E0007CB897 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		95750B5B28EB0886007CB897 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		95756B9328EAE6300087A408 /* Graphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphics.swift; sourceTree = "<group>"; };
 		9578205428E6E73E004C1CE4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		9578205628E6F4E8004C1CE4 /* ka */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ka; path = ka.lproj/Main.strings; sourceTree = "<group>"; };
 		9578205728E6F4E8004C1CE4 /* ka */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ka; path = ka.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -53,12 +68,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95750B5F28EB1F07007CB897 /* iOSDropDown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95750B4C28EAFEE5007CB897 /* live_data */ = {
+			isa = PBXGroup;
+			children = (
+				95750B4D28EAFEFB007CB897 /* LiveData.swift */,
+				95750B4F28EAFF16007CB897 /* Observable.swift */,
+				95750B5128EAFF1F007CB897 /* Observer.swift */,
+			);
+			path = live_data;
+			sourceTree = "<group>";
+		};
+		95750B5328EB0467007CB897 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				9592BECB28E5A196004E1C6B /* WordsDataBaseHelper.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
+		95750B5428EB04B8007CB897 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				95750B5528EB04C9007CB897 /* HomeScreenController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		95750B5728EB04D4007CB897 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				95750B5828EB04E0007CB897 /* BaseViewController.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		95750B5A28EB086F007CB897 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				95750B5B28EB0886007CB897 /* PaddingLabel.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		9578206128E6F7A7004C1CE4 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +144,7 @@
 		9592BEAB28E598F4004E1C6B /* Alias */ = {
 			isa = PBXGroup;
 			children = (
+				95750B5428EB04B8007CB897 /* controller */,
 				9578206128E6F7A7004C1CE4 /* extensions */,
 				95A262B128E6DFBA0023795B /* style */,
 				9592BECA28E5A186004E1C6B /* util */,
@@ -123,7 +182,10 @@
 		9592BECA28E5A186004E1C6B /* util */ = {
 			isa = PBXGroup;
 			children = (
-				9592BECB28E5A196004E1C6B /* WordsDataBaseHelper.swift */,
+				95750B5A28EB086F007CB897 /* view */,
+				95750B5728EB04D4007CB897 /* base */,
+				95750B5328EB0467007CB897 /* helper */,
+				95750B4C28EAFEE5007CB897 /* live_data */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -133,6 +195,7 @@
 			children = (
 				9578205428E6E73E004C1CE4 /* Theme.swift */,
 				9589D9D628E6FBFB005A48C5 /* Localization.swift */,
+				95756B9328EAE6300087A408 /* Graphics.swift */,
 			);
 			path = style;
 			sourceTree = "<group>";
@@ -153,6 +216,9 @@
 			dependencies = (
 			);
 			name = Alias;
+			packageProductDependencies = (
+				95750B5E28EB1F07007CB897 /* iOSDropDown */,
+			);
 			productName = Alias;
 			productReference = 9592BEA928E598F4004E1C6B /* Alias.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +249,9 @@
 				ru,
 			);
 			mainGroup = 9592BEA028E598F4004E1C6B;
+			packageReferences = (
+				95750B5D28EB1F07007CB897 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
+			);
 			productRefGroup = 9592BEAA28E598F4004E1C6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -212,15 +281,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95750B5028EAFF16007CB897 /* Observable.swift in Sources */,
 				9592BEB728E598F4004E1C6B /* Alias.xcdatamodeld in Sources */,
+				95750B5628EB04C9007CB897 /* HomeScreenController.swift in Sources */,
 				9592BEB128E598F4004E1C6B /* ViewController.swift in Sources */,
+				95750B5C28EB0886007CB897 /* PaddingLabel.swift in Sources */,
 				9578205528E6E73E004C1CE4 /* Theme.swift in Sources */,
+				95750B5928EB04E0007CB897 /* BaseViewController.swift in Sources */,
 				9578206328E6F7BC004C1CE4 /* Extensions.swift in Sources */,
+				95750B5228EAFF1F007CB897 /* Observer.swift in Sources */,
 				9592BEC928E59FE1004E1C6B /* Word.swift in Sources */,
 				9589D9D728E6FBFB005A48C5 /* Localization.swift in Sources */,
+				95756B9428EAE6300087A408 /* Graphics.swift in Sources */,
 				9592BEAD28E598F4004E1C6B /* AppDelegate.swift in Sources */,
 				9592BECC28E5A196004E1C6B /* WordsDataBaseHelper.swift in Sources */,
 				9592BEAF28E598F4004E1C6B /* SceneDelegate.swift in Sources */,
+				95750B4E28EAFEFB007CB897 /* LiveData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +529,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95750B5D28EB1F07007CB897 /* XCRemoteSwiftPackageReference "iOSDropDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jriosdev/iOSDropDown.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95750B5E28EB1F07007CB897 /* iOSDropDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95750B5D28EB1F07007CB897 /* XCRemoteSwiftPackageReference "iOSDropDown" */;
+			productName = iOSDropDown;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9592BEB528E598F4004E1C6B /* Alias.xcdatamodeld */ = {
