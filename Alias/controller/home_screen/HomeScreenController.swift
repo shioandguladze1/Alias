@@ -13,7 +13,6 @@ class HomeScreenController: BaseViewController {
     @IBOutlet weak var rulesButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var dropDown: DropDown!
-    @IBOutlet weak var testView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
