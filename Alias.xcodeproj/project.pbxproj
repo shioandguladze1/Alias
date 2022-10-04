@@ -12,7 +12,6 @@
 		95750B5228EAFF1F007CB897 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95750B5128EAFF1F007CB897 /* Observer.swift */; };
 		95750B5628EB04C9007CB897 /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95750B5528EB04C9007CB897 /* HomeScreenController.swift */; };
 		95750B5928EB04E0007CB897 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95750B5828EB04E0007CB897 /* BaseViewController.swift */; };
-		95750B5C28EB0886007CB897 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95750B5B28EB0886007CB897 /* PaddingLabel.swift */; };
 		95750B5F28EB1F07007CB897 /* iOSDropDown in Frameworks */ = {isa = PBXBuildFile; productRef = 95750B5E28EB1F07007CB897 /* iOSDropDown */; };
 		95756B9428EAE6300087A408 /* Graphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95756B9328EAE6300087A408 /* Graphics.swift */; };
 		9578205528E6E73E004C1CE4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578205428E6E73E004C1CE4 /* Theme.swift */; };
@@ -29,6 +28,12 @@
 		9592BEC628E59DD0004E1C6B /* words.db in Resources */ = {isa = PBXBuildFile; fileRef = 9592BEC528E59DD0004E1C6B /* words.db */; };
 		9592BEC928E59FE1004E1C6B /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEC828E59FE1004E1C6B /* Word.swift */; };
 		9592BECC28E5A196004E1C6B /* WordsDataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BECB28E5A196004E1C6B /* WordsDataBaseHelper.swift */; };
+		959C3B9728EC41FA006E849B /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C3B9628EC41FA006E849B /* RulesViewController.swift */; };
+		959C3B9928EC424D006E849B /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C3B9828EC424D006E849B /* Rule.swift */; };
+		959C3B9F28EC429E006E849B /* RulesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C3B9D28EC429E006E849B /* RulesTableViewCell.swift */; };
+		959C3BA028EC429E006E849B /* RulesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959C3B9E28EC429E006E849B /* RulesTableViewCell.xib */; };
+		959C3BA228EC45E7006E849B /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C3BA128EC45E7006E849B /* TableViewAdapter.swift */; };
+		959C3BA428EC45F4006E849B /* TableViewAdapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C3BA328EC45F4006E849B /* TableViewAdapterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +42,6 @@
 		95750B5128EAFF1F007CB897 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		95750B5528EB04C9007CB897 /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
 		95750B5828EB04E0007CB897 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		95750B5B28EB0886007CB897 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		95756B9328EAE6300087A408 /* Graphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphics.swift; sourceTree = "<group>"; };
 		9578205428E6E73E004C1CE4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		9578205628E6F4E8004C1CE4 /* ka */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ka; path = ka.lproj/Main.strings; sourceTree = "<group>"; };
@@ -61,6 +65,12 @@
 		9592BEC528E59DD0004E1C6B /* words.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = words.db; sourceTree = "<group>"; };
 		9592BEC828E59FE1004E1C6B /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		9592BECB28E5A196004E1C6B /* WordsDataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsDataBaseHelper.swift; sourceTree = "<group>"; };
+		959C3B9628EC41FA006E849B /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		959C3B9828EC424D006E849B /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		959C3B9D28EC429E006E849B /* RulesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewCell.swift; sourceTree = "<group>"; };
+		959C3B9E28EC429E006E849B /* RulesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesTableViewCell.xib; sourceTree = "<group>"; };
+		959C3BA128EC45E7006E849B /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
+		959C3BA328EC45F4006E849B /* TableViewAdapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +106,9 @@
 		95750B5428EB04B8007CB897 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				95750B5528EB04C9007CB897 /* HomeScreenController.swift */,
+				959C3BA528EC60D5006E849B /* game_mode */,
+				959C3B9B28EC427B006E849B /* ruels */,
+				959C3B9A28EC4270006E849B /* home_screen */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -112,7 +124,8 @@
 		95750B5A28EB086F007CB897 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				95750B5B28EB0886007CB897 /* PaddingLabel.swift */,
+				959C3BA128EC45E7006E849B /* TableViewAdapter.swift */,
+				959C3BA328EC45F4006E849B /* TableViewAdapterCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				9592BEC828E59FE1004E1C6B /* Word.swift */,
+				959C3B9828EC424D006E849B /* Rule.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -188,6 +202,39 @@
 				95750B4C28EAFEE5007CB897 /* live_data */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		959C3B9A28EC4270006E849B /* home_screen */ = {
+			isa = PBXGroup;
+			children = (
+				95750B5528EB04C9007CB897 /* HomeScreenController.swift */,
+			);
+			path = home_screen;
+			sourceTree = "<group>";
+		};
+		959C3B9B28EC427B006E849B /* ruels */ = {
+			isa = PBXGroup;
+			children = (
+				959C3B9C28EC4285006E849B /* cell */,
+				959C3B9628EC41FA006E849B /* RulesViewController.swift */,
+			);
+			path = ruels;
+			sourceTree = "<group>";
+		};
+		959C3B9C28EC4285006E849B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				959C3B9D28EC429E006E849B /* RulesTableViewCell.swift */,
+				959C3B9E28EC429E006E849B /* RulesTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		959C3BA528EC60D5006E849B /* game_mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = game_mode;
 			sourceTree = "<group>";
 		};
 		95A262B128E6DFBA0023795B /* style */ = {
@@ -271,6 +318,7 @@
 				9592BEB928E598F6004E1C6B /* Assets.xcassets in Resources */,
 				9592BEB428E598F4004E1C6B /* Main.storyboard in Resources */,
 				9592BEC628E59DD0004E1C6B /* words.db in Resources */,
+				959C3BA028EC429E006E849B /* RulesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,14 +331,18 @@
 			files = (
 				95750B5028EAFF16007CB897 /* Observable.swift in Sources */,
 				9592BEB728E598F4004E1C6B /* Alias.xcdatamodeld in Sources */,
+				959C3BA228EC45E7006E849B /* TableViewAdapter.swift in Sources */,
 				95750B5628EB04C9007CB897 /* HomeScreenController.swift in Sources */,
+				959C3B9928EC424D006E849B /* Rule.swift in Sources */,
+				959C3B9F28EC429E006E849B /* RulesTableViewCell.swift in Sources */,
 				9592BEB128E598F4004E1C6B /* ViewController.swift in Sources */,
-				95750B5C28EB0886007CB897 /* PaddingLabel.swift in Sources */,
+				959C3B9728EC41FA006E849B /* RulesViewController.swift in Sources */,
 				9578205528E6E73E004C1CE4 /* Theme.swift in Sources */,
 				95750B5928EB04E0007CB897 /* BaseViewController.swift in Sources */,
 				9578206328E6F7BC004C1CE4 /* Extensions.swift in Sources */,
 				95750B5228EAFF1F007CB897 /* Observer.swift in Sources */,
 				9592BEC928E59FE1004E1C6B /* Word.swift in Sources */,
+				959C3BA428EC45F4006E849B /* TableViewAdapterCell.swift in Sources */,
 				9589D9D728E6FBFB005A48C5 /* Localization.swift in Sources */,
 				95756B9428EAE6300087A408 /* Graphics.swift in Sources */,
 				9592BEAD28E598F4004E1C6B /* AppDelegate.swift in Sources */,

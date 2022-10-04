@@ -43,6 +43,7 @@ class ViewController: UIPageViewController {
         controllers = [c1, c2, c3]
         
         setViewControllers([c2], direction: .forward, animated: true)
+        
     }
 
 
