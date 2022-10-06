@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6iV-8h-rHm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -94,14 +94,6 @@
                                     <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1KI-aj-gdA"/>
                                 </connections>
                             </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-Fy-2wu">
-                                <rect key="frame" x="157" y="398" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="2Ha-oX-aBf"/>
-                                    <constraint firstAttribute="width" constant="100" id="aHg-hl-ec4"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -113,11 +105,9 @@
                             <constraint firstItem="Ern-Bq-b53" firstAttribute="centerX" secondItem="kac-YE-xvD" secondAttribute="centerX" id="LYG-pF-bYh"/>
                             <constraint firstItem="MKT-Xh-IDa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-12" id="Pej-gv-qkc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9AU-N9-Rgy" secondAttribute="bottom" constant="20" id="QAc-K0-ghH"/>
-                            <constraint firstItem="MgL-Fy-2wu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WCX-0W-RFF"/>
                             <constraint firstItem="kac-YE-xvD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X79-4t-2qb"/>
                             <constraint firstItem="kac-YE-xvD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zd9-Mr-Ncq"/>
                             <constraint firstItem="MKT-Xh-IDa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ZkP-Ih-fu3"/>
-                            <constraint firstItem="MgL-Fy-2wu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cKQ-2D-k0D"/>
                             <constraint firstItem="tIa-eA-7Ur" firstAttribute="height" secondItem="9AU-N9-Rgy" secondAttribute="height" id="jM9-kL-gC4"/>
                             <constraint firstItem="tIa-eA-7Ur" firstAttribute="leading" secondItem="9AU-N9-Rgy" secondAttribute="trailing" constant="18" id="pv1-dm-cZH"/>
                         </constraints>
@@ -127,12 +117,26 @@
                         <outlet property="dropDown" destination="MKT-Xh-IDa" id="mE0-D6-j9e"/>
                         <outlet property="playButton" destination="tIa-eA-7Ur" id="sNK-92-dMs"/>
                         <outlet property="rulesButton" destination="9AU-N9-Rgy" id="LWH-xy-fJQ"/>
-                        <outlet property="testView" destination="MgL-Fy-2wu" id="Jjw-GX-Tuj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1033" y="98"/>
+            <point key="canvasLocation" x="-2506" y="97"/>
+        </scene>
+        <!--Game Mode View Controller-->
+        <scene sceneID="zSv-N7-bEZ">
+            <objects>
+                <viewController id="6iV-8h-rHm" customClass="GameModeViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1i1-dH-cnm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="z9g-mY-Qh4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wlx-sC-LOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1543" y="96"/>
         </scene>
         <!--Rules View Controller-->
         <scene sceneID="jSe-KL-i5b">
@@ -162,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhP-od-5TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138" y="98"/>
+            <point key="canvasLocation" x="680" y="96"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="C5w-6h-lLR">
@@ -170,7 +174,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Evf-lc-VXW" customClass="ViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zk1-UO-FM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="98"/>
+            <point key="canvasLocation" x="1609" y="96"/>
         </scene>
     </scenes>
     <resources>
@@ -180,9 +184,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

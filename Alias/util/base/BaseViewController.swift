@@ -9,6 +9,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
     private var observer: Observer<Localization>?
+    var classKey: String?
     
     private let loaderView: UIView = {
         let view = UIView()
@@ -27,6 +28,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         observer = Observer{_ in self.setTexts() }
         localizationLiveData.addObserver(observer: observer!)
+        classKey = String(describing: self)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -51,5 +53,10 @@ class BaseViewController: UIViewController {
         loaderView.removeFromSuperview()
         indicatorView.stopAnimating()
         indicatorView.removeFromSuperview()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        clearObservations(forKey: classKey)
     }
 }

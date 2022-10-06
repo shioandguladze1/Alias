@@ -19,3 +19,7 @@
 "rules_twelveth"="Bonus Rounds held until the winner by total points appears";
 "rules_thirteenth"="Stuck?";
 "rules_fourteenth"="If Stuck, Round can be Skipped. Points are Saved";
+
+"classic" = "Classic";
+"arcade" = "Arcade";
+"choose_game_mode" = "Choose Game Mode";

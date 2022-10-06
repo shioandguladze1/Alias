@@ -34,6 +34,10 @@
 		959C3BA028EC429E006E849B /* RulesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 959C3B9E28EC429E006E849B /* RulesTableViewCell.xib */; };
 		959C3BA228EC45E7006E849B /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C3BA128EC45E7006E849B /* TableViewAdapter.swift */; };
 		959C3BA428EC45F4006E849B /* TableViewAdapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C3BA328EC45F4006E849B /* TableViewAdapterCell.swift */; };
+		959E81A128EF2CBD008D49B1 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E81A028EF2CBD008D49B1 /* PaddingLabel.swift */; };
+		959E81A328EF3063008D49B1 /* GameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E81A228EF3063008D49B1 /* GameModeViewController.swift */; };
+		959E81A528EF308F008D49B1 /* GlobalViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E81A428EF308F008D49B1 /* GlobalViewProvider.swift */; };
+		959E81A728EF4063008D49B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E81A628EF4063008D49B1 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +75,10 @@
 		959C3B9E28EC429E006E849B /* RulesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesTableViewCell.xib; sourceTree = "<group>"; };
 		959C3BA128EC45E7006E849B /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		959C3BA328EC45F4006E849B /* TableViewAdapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterCell.swift; sourceTree = "<group>"; };
+		959E81A028EF2CBD008D49B1 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		959E81A228EF3063008D49B1 /* GameModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeViewController.swift; sourceTree = "<group>"; };
+		959E81A428EF308F008D49B1 /* GlobalViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewProvider.swift; sourceTree = "<group>"; };
+		959E81A628EF4063008D49B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +132,10 @@
 		95750B5A28EB086F007CB897 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				959E819F28EF2CB0008D49B1 /* label */,
 				959C3BA128EC45E7006E849B /* TableViewAdapter.swift */,
 				959C3BA328EC45F4006E849B /* TableViewAdapterCell.swift */,
+				959E81A428EF308F008D49B1 /* GlobalViewProvider.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -189,6 +199,7 @@
 			children = (
 				9592BEC828E59FE1004E1C6B /* Word.swift */,
 				959C3B9828EC424D006E849B /* Rule.swift */,
+				959E81A628EF4063008D49B1 /* Game.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -233,8 +244,17 @@
 		959C3BA528EC60D5006E849B /* game_mode */ = {
 			isa = PBXGroup;
 			children = (
+				959E81A228EF3063008D49B1 /* GameModeViewController.swift */,
 			);
 			path = game_mode;
+			sourceTree = "<group>";
+		};
+		959E819F28EF2CB0008D49B1 /* label */ = {
+			isa = PBXGroup;
+			children = (
+				959E81A028EF2CBD008D49B1 /* PaddingLabel.swift */,
+			);
+			path = label;
 			sourceTree = "<group>";
 		};
 		95A262B128E6DFBA0023795B /* style */ = {
@@ -336,12 +356,16 @@
 				959C3B9928EC424D006E849B /* Rule.swift in Sources */,
 				959C3B9F28EC429E006E849B /* RulesTableViewCell.swift in Sources */,
 				9592BEB128E598F4004E1C6B /* ViewController.swift in Sources */,
+				959E81A728EF4063008D49B1 /* Game.swift in Sources */,
 				959C3B9728EC41FA006E849B /* RulesViewController.swift in Sources */,
 				9578205528E6E73E004C1CE4 /* Theme.swift in Sources */,
+				959E81A128EF2CBD008D49B1 /* PaddingLabel.swift in Sources */,
 				95750B5928EB04E0007CB897 /* BaseViewController.swift in Sources */,
 				9578206328E6F7BC004C1CE4 /* Extensions.swift in Sources */,
 				95750B5228EAFF1F007CB897 /* Observer.swift in Sources */,
 				9592BEC928E59FE1004E1C6B /* Word.swift in Sources */,
+				959E81A528EF308F008D49B1 /* GlobalViewProvider.swift in Sources */,
+				959E81A328EF3063008D49B1 /* GameModeViewController.swift in Sources */,
 				959C3BA428EC45F4006E849B /* TableViewAdapterCell.swift in Sources */,
 				9589D9D728E6FBFB005A48C5 /* Localization.swift in Sources */,
 				95756B9428EAE6300087A408 /* Graphics.swift in Sources */,
