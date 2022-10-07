@@ -13,8 +13,13 @@ enum GameMode{
 }
 
 class Game{
-    var gameMode: GameMode?
+    var gameMode: GameMode? {
+        didSet{
+            NotificationCenter.default.post(name: Game.notificationName, object: gameMode)
+        }
+    }
     
+    static let notificationName = NSNotification.Name("Game")
     static var instance: Game?
     static func getInstance()-> Game{
         guard let instance = instance else {

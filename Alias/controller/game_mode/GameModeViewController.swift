@@ -28,6 +28,7 @@ class GameModeViewController: BaseViewController {
         setUpArcadeButton()
         setUpClassicButton()
         setUpTitleLabel()
+        addGameModeObserver()
     }
     
     private func setUpViews(){
@@ -82,10 +83,9 @@ class GameModeViewController: BaseViewController {
             break
         }
                 
-        changeButtonColors()
     }
     
-    private func changeButtonColors(){
+    @objc private func changeButtonColors(){
         switch game?.gameMode{
         case .Classic:
             classicButton?.backgroundColor = GlobalColorProvider.getColor(color: .subtleGreen).asUIColor()
@@ -97,16 +97,9 @@ class GameModeViewController: BaseViewController {
             return
         }
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func addGameModeObserver(){
+        NotificationCenter.default.addObserver(self, selector: #selector(changeButtonColors), name: Game.notificationName, object: nil)
     }
-    */
 
 }

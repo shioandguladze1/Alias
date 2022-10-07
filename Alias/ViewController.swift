@@ -16,33 +16,12 @@ class ViewController: UIPageViewController {
         dataSource = self
         delegate = self
         
-        let c1 = UIViewController()
-        c1.view.backgroundColor = .red
+        let c1 = GameModeViewController()
+        let c2 = TeamsViewController()
         
-        let c2 = UIViewController()
-        let textview = UITextView()
-        textview.frame = CGRect(x: 0, y: 0, width: 300, height: 100)
-        textview.translatesAutoresizingMaskIntoConstraints = false
-        textview.textColor = .white
-        textview.backgroundColor = .brown
-        c2.view.addSubview(textview)
-        textview.center = c2.view.center
+        controllers = [c1, c2]
         
-        DispatchQueue.main.async {
-            sleep(3)
-            changeLocalization(localization: .Russian)
-        }
-        
-            
-        changeLocalization(localization: .English)
-        print("Welcome".localized())
-        
-        let c3 = UIViewController()
-        c3.view.backgroundColor = .cyan
-        
-        controllers = [c1, c2, c3]
-        
-        setViewControllers([c2], direction: .forward, animated: true)
+        setViewControllers([c1], direction: .forward, animated: true)
         
     }
 
