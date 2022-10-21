@@ -16,3 +16,17 @@ extension CGColor {
     
 }
 
+extension UIView {
+    
+    func hideWithFade(duration: TimeInterval = 1.0){
+        UIView.animate(withDuration: duration) {
+            self.layer.opacity = 0
+        } completion: { completed in
+            if completed {
+                self.isHidden = true
+            }
+        }
+    }
+    
+}
+

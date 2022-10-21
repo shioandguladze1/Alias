@@ -20,6 +20,8 @@
 		957CAB0D28F045EE00B972CD /* SnakeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CAB0C28F045EE00B972CD /* SnakeButton.swift */; };
 		957CAB1028F0481E00B972CD /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CAB0F28F0481E00B972CD /* TeamsViewController.swift */; };
 		9589D9D728E6FBFB005A48C5 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589D9D628E6FBFB005A48C5 /* Localization.swift */; };
+		958D8E192902A9F00022DCE3 /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8E172902A9EF0022DCE3 /* TeamsTableViewCell.swift */; };
+		958D8E1A2902A9F00022DCE3 /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958D8E182902A9F00022DCE3 /* TeamsTableViewCell.xib */; };
 		9592BEAD28E598F4004E1C6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEAC28E598F4004E1C6B /* AppDelegate.swift */; };
 		9592BEAF28E598F4004E1C6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEAE28E598F4004E1C6B /* SceneDelegate.swift */; };
 		9592BEB128E598F4004E1C6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEB028E598F4004E1C6B /* ViewController.swift */; };
@@ -61,6 +63,8 @@
 		957CAB0C28F045EE00B972CD /* SnakeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeButton.swift; sourceTree = "<group>"; };
 		957CAB0F28F0481E00B972CD /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		9589D9D628E6FBFB005A48C5 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		958D8E172902A9EF0022DCE3 /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
+		958D8E182902A9F00022DCE3 /* TeamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsTableViewCell.xib; sourceTree = "<group>"; };
 		9592BEA928E598F4004E1C6B /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9592BEAC28E598F4004E1C6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9592BEAE28E598F4004E1C6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,9 +169,19 @@
 		957CAB0E28F0480C00B972CD /* teams */ = {
 			isa = PBXGroup;
 			children = (
+				958D8E122902A4DA0022DCE3 /* cell */,
 				957CAB0F28F0481E00B972CD /* TeamsViewController.swift */,
 			);
 			path = teams;
+			sourceTree = "<group>";
+		};
+		958D8E122902A4DA0022DCE3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				958D8E172902A9EF0022DCE3 /* TeamsTableViewCell.swift */,
+				958D8E182902A9F00022DCE3 /* TeamsTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		9592BEA028E598F4004E1C6B = {
@@ -358,6 +372,7 @@
 				9578205C28E6F5F3004C1CE4 /* Localizable.strings in Resources */,
 				9592BEBC28E598F6004E1C6B /* LaunchScreen.storyboard in Resources */,
 				9592BEB928E598F6004E1C6B /* Assets.xcassets in Resources */,
+				958D8E1A2902A9F00022DCE3 /* TeamsTableViewCell.xib in Resources */,
 				9592BEB428E598F4004E1C6B /* Main.storyboard in Resources */,
 				9592BEC628E59DD0004E1C6B /* words.db in Resources */,
 				959C3BA028EC429E006E849B /* RulesTableViewCell.xib in Resources */,
@@ -373,6 +388,7 @@
 			files = (
 				95750B5028EAFF16007CB897 /* Observable.swift in Sources */,
 				9592BEB728E598F4004E1C6B /* Alias.xcdatamodeld in Sources */,
+				958D8E192902A9F00022DCE3 /* TeamsTableViewCell.swift in Sources */,
 				959C3BA228EC45E7006E849B /* TableViewAdapter.swift in Sources */,
 				95750B5628EB04C9007CB897 /* HomeScreenController.swift in Sources */,
 				959C3B9928EC424D006E849B /* Rule.swift in Sources */,

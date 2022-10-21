@@ -47,6 +47,29 @@ func getGameModeButton(forKey: String, direction: Direction)-> PaddingLabel{
     return label
 }
 
+func getRoundButtonWithIcon(size: Int, padding: Int, iconName: String)-> UIButton {
+    let button = UIButton()
+    button.frame = CGRect(x: 0, y: 0, width: size, height: size)
+    let imageView = UIImageView()
+    imageView.image = UIImage(systemName: iconName)
+    button.addSubview(imageView)
+    imageView.frame = CGRect(x: 0, y: 0, width: size - padding, height: size - padding)
+    imageView.center = button.center
+    imageView.tintColor = .white
+    button.layer.cornerRadius = 30
+    button.backgroundColor = GlobalColorProvider.getColor(color: .darkBlue).asUIColor()
+    button.clipsToBounds = true
+    return button
+}
+
+func getTeamTextField(){
+    let textField = UITextField()
+    textField.layer.cornerRadius = 50
+    textField.layer.maskedCorners = [.layerMinXMinYCorner]
+    textField.clipsToBounds = true
+    textField.backgroundColor = GlobalColorProvider.getColor(color: .darkBlue).asUIColor()
+}
+
 func clearObservations(forKey: String?){
     if let key = forKey {
         observers[key]?.forEach{ $0.invalidate() }
