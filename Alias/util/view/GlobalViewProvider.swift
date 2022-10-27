@@ -56,7 +56,8 @@ func getRoundButtonWithIcon(size: Int, padding: Int, iconName: String)-> UIButto
     imageView.frame = CGRect(x: 0, y: 0, width: size - padding, height: size - padding)
     imageView.center = button.center
     imageView.tintColor = .white
-    button.layer.cornerRadius = 30
+    imageView.contentMode = .scaleAspectFit
+    button.layer.cornerRadius = CGFloat(size / 2)
     button.backgroundColor = GlobalColorProvider.getColor(color: .darkBlue).asUIColor()
     button.clipsToBounds = true
     return button

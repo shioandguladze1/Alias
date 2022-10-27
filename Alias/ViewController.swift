@@ -18,10 +18,11 @@ class ViewController: UIPageViewController {
         
         let c1 = GameModeViewController()
         let c2 = TeamsViewController()
+        let c3 = TimeAndPointsViewController()
         
-        controllers = [c1, c2]
+        controllers = [c1, c2, c3]
         
-        setViewControllers([c1], direction: .forward, animated: true)
+        setViewControllers([c3], direction: .forward, animated: true)
     
     }
 
