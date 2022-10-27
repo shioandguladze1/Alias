@@ -131,7 +131,7 @@ class TimeAndPointsViewController: BaseViewController {
         
         pointsSliderLabel.textColor = .white
         pointsSliderLabel.font = .boldSystemFont(ofSize: 40)
-        pointsSliderLabel.text = "Points"
+        pointsSliderLabel.text = "points".localized()
         pointsSliderLabel.sizeToFit()
         
         NSLayoutConstraint.activate([
@@ -145,7 +145,7 @@ class TimeAndPointsViewController: BaseViewController {
         
         timeSliderLabel.textColor = .white
         timeSliderLabel.font = .boldSystemFont(ofSize: 40)
-        timeSliderLabel.text = "Time"
+        timeSliderLabel.text = "time".localized()
         timeSliderLabel.sizeToFit()
         
         NSLayoutConstraint.activate([

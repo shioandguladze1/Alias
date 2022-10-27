@@ -22,8 +22,8 @@ class ViewController: UIPageViewController {
         
         controllers = [c1, c2, c3]
         
-        setViewControllers([c3], direction: .forward, animated: true)
-    
+        setViewControllers([c1], direction: .forward, animated: true)
+        
     }
 
 

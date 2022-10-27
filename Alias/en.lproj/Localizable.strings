@@ -23,3 +23,6 @@
 "classic" = "Classic";
 "arcade" = "Arcade";
 "choose_game_mode" = "Choose Game Mode";
+
+"time" = "Time";
+"points" = "Points";

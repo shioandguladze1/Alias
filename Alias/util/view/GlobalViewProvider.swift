@@ -63,12 +63,20 @@ func getRoundButtonWithIcon(size: Int, padding: Int, iconName: String)-> UIButto
     return button
 }
 
-func getTeamTextField(){
-    let textField = UITextField()
-    textField.layer.cornerRadius = 50
-    textField.layer.maskedCorners = [.layerMinXMinYCorner]
-    textField.clipsToBounds = true
-    textField.backgroundColor = GlobalColorProvider.getColor(color: .darkBlue).asUIColor()
+func getTeamTextField(id: Int)-> UITextField{
+    let teamTextField = UITextField()
+    teamTextField.layer.cornerRadius = 26
+    teamTextField.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+    teamTextField.backgroundColor = GlobalColorProvider.getColor(color: .darkBlue).asUIColor()
+    teamTextField.clipsToBounds = true
+    
+    let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
+    teamTextField.leftView = paddingView
+    teamTextField.leftViewMode = .always
+    teamTextField.transform = CGAffineTransform(scaleX: 1, y: -1)
+    
+    teamTextField.text = "Team\(id)"
+    return teamTextField
 }
 
 func clearObservations(forKey: String?){

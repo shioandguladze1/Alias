@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Evf-lc-VXW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W7D-f8-Lok">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -55,6 +55,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Start Game" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tn9-WZ-1bX"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="English" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MKT-Xh-IDa" customClass="JRDropDown">
                                 <rect key="frame" x="272" y="60" width="130" height="22"/>
@@ -112,6 +115,7 @@
                             <constraint firstItem="tIa-eA-7Ur" firstAttribute="leading" secondItem="9AU-N9-Rgy" secondAttribute="trailing" constant="18" id="pv1-dm-cZH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1Jd-xT-QUX"/>
                     <connections>
                         <outlet property="appNameBackgroundView" destination="kac-YE-xvD" id="Gi3-AF-x5J"/>
                         <outlet property="dropDown" destination="MKT-Xh-IDa" id="mE0-D6-j9e"/>
@@ -121,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2506" y="97"/>
+            <point key="canvasLocation" x="-1597.1014492753625" y="96.428571428571431"/>
         </scene>
         <!--Game Mode View Controller-->
         <scene sceneID="zSv-N7-bEZ">
@@ -136,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlx-sC-LOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543" y="96"/>
+            <point key="canvasLocation" x="-633.33333333333337" y="95.758928571428569"/>
         </scene>
         <!--Teams View Controller-->
         <scene sceneID="704-72-QAg">
@@ -151,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAr-bB-Gyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-639" y="96"/>
+            <point key="canvasLocation" x="271.01449275362319" y="95.758928571428569"/>
         </scene>
         <!--Rules View Controller-->
         <scene sceneID="jSe-KL-i5b">
@@ -181,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhP-od-5TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680" y="96"/>
+            <point key="canvasLocation" x="1589.8550724637682" y="95.758928571428569"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="C5w-6h-lLR">
@@ -189,7 +193,25 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Evf-lc-VXW" customClass="ViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zk1-UO-FM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="96"/>
+            <point key="canvasLocation" x="2518.840579710145" y="95.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8lk-sE-Nwz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="W7D-f8-Lok" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JjC-7l-GXP">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hv5-cd-EFH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2h-T2-Ksd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2507.2463768115945" y="96.428571428571431"/>
         </scene>
     </scenes>
     <resources>

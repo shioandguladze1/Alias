@@ -9,11 +9,13 @@ import UIKit
 
 class TeamsTableViewCell: UITableViewCell, TableViewAdapterCell {
     @IBOutlet weak var teamTextField: UITextField!
+    private var id: Int?
     
     typealias T = Int
     
     func setUp(data: Int?) {
         if let data = data { teamTextField.text = "Team\(data)" }
+        id = data
     }
     
     override func awakeFromNib() {
@@ -32,5 +34,13 @@ class TeamsTableViewCell: UITableViewCell, TableViewAdapterCell {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
         teamTextField.leftView = paddingView
         teamTextField.leftViewMode = .always
+    }
+    
+    func getTeamName()-> String{
+        teamTextField.text ?? ""
+    }
+    
+    func getId()-> Int {
+        id ?? -1
     }
 }

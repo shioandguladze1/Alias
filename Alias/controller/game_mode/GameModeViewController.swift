@@ -23,7 +23,6 @@ class GameModeViewController: BaseViewController {
         super.viewDidLoad()
         game = Game.getInstance()
         view.backgroundColor = GlobalColorProvider.getColor(color: .nordDark).asUIColor()
-
         setUpViews()
         setUpArcadeButton()
         setUpClassicButton()

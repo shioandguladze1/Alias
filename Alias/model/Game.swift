@@ -18,6 +18,7 @@ class Game{
             NotificationCenter.default.post(name: Game.notificationName, object: gameMode)
         }
     }
+    var teams: [Team] = []
     
     static let notificationName = NSNotification.Name("Game")
     static var instance: Game?

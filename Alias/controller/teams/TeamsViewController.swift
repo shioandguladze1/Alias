@@ -9,9 +9,6 @@ import UIKit
 
 class TeamsViewController: UIViewController {
     private let game = Game.getInstance()
-    private var teamsAdapter: TableViewAdapter<Int, TeamsTableViewCell>?
-    private var teams = [2, 1]
-    
     
     private let classicSnakeButton: SnakeButton = {
         let button = SnakeButton()
@@ -31,10 +28,11 @@ class TeamsViewController: UIViewController {
         return button
     }()
     
-    private let teamsTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
+    private let teamsStackView: UIStackView = {
+        let stackview = UIStackView()
+        stackview.axis = .vertical
+        stackview.translatesAutoresizingMaskIntoConstraints = false
+        return stackview
     }()
     
     private let imageView: UIImageView = {
@@ -57,15 +55,9 @@ class TeamsViewController: UIViewController {
         setUpAddButton()
         addGameModeObserver()
         changeSnakeButtonColors()
-        setUpTableView()
-        setUpAdapter()
+        setUpTeamsStackView()
         setUpImageView()
         setUpContinueButton()
-    }
-    
-    private func setUpAdapter(){
-        teamsAdapter = TableViewAdapter(tableView: teamsTableView, cellIdentifier: "TeamsTableViewCell", rowHeight: 60)
-        teamsAdapter?.setData(data: teams)
     }
     
     private func setUpContinueButton(){
@@ -95,18 +87,17 @@ class TeamsViewController: UIViewController {
         )
     }
     
-    private func setUpTableView(){
-        view.addSubview(teamsTableView)
-        teamsTableView.backgroundColor = .clear
-        teamsTableView.allowsSelection = false
+    private func setUpTeamsStackView(){
+        view.addSubview(teamsStackView)
+        teamsStackView.backgroundColor = .clear
         NSLayoutConstraint.activate([
-            teamsTableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32),
-            teamsTableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32),
-            teamsTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height * 0.1 + 8),
-            teamsTableView.bottomAnchor.constraint(equalTo: classicSnakeButton.topAnchor, constant: -8)
+            teamsStackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32),
+            teamsStackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32),
+            teamsStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height * 0.1 + 8),
+            teamsStackView.bottomAnchor.constraint(equalTo: classicSnakeButton.topAnchor, constant: -8)
         ])
         
-        teamsTableView.transform = CGAffineTransform(scaleX: 1, y: -1)
+        teamsStackView.transform = CGAffineTransform(scaleX: 1, y: -1)
     }
     
     private func setUpAddButton(){
@@ -154,17 +145,16 @@ class TeamsViewController: UIViewController {
     }
     
     @objc private func addTeams(){
+        let teams = teamsStackView.arrangedSubviews
+        
         if teams.count >= 6 {
             return
         }else if teams.count == 3 {
             imageView.hideWithFade(duration: 0.2)
         }
         
-        let currentNumber = teams[0] + 1
-        var newList = [currentNumber]
-        newList.append(contentsOf: teams)
-        teams = newList
-        teamsAdapter?.setData(data: teams)
+        let currentNumber = teams.count
+        teamsStackView.addArrangedSubview(getTeamTextField(id: currentNumber))
     }
     
     @objc private func changeGameMode(_ gesture: UITapGestureRecognizer? = nil){
