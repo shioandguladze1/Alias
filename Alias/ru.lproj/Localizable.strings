@@ -26,3 +26,5 @@
 
 "time" = "ВРЕМЯ";
 "points" = "ОЧКИ";
+
+"db_table_name" = "words_ru";

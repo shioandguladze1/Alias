@@ -33,7 +33,7 @@ class WordsDataBaseHelper{
         return nil
     }
     
-    func readWords(table: String, condition: String = "") -> [Word] {
+    func readWords(table: String = "db_table_name".localized(), condition: String = "") -> [Word] {
         let queryStatementString = "select id, keyword from \(table) \(condition);"
         var queryStatement: OpaquePointer? = nil
         var words : [Word] = []

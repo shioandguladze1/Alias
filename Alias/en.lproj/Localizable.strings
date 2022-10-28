@@ -26,3 +26,5 @@
 
 "time" = "Time";
 "points" = "Points";
+
+"db_table_name" = "words_en";

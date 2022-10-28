@@ -7,7 +7,13 @@
 
 import Foundation
 
-struct Team {
+class Team {
     let id: Int
     let name: String
+    var points = 0
+    
+    init(id: Int, name: String){
+        self.id = id
+        self.name = name
+    }
 }

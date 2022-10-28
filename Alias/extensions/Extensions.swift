@@ -30,3 +30,32 @@ extension UIView {
     
 }
 
+extension UIViewController {
+    
+    func showAlertWithOkButton(title: String, body: String){
+        let dialogMessage = UIAlertController(title: title, message: body, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "OK", style: .default){_ in
+            dialogMessage.dismiss(animated: true)
+        }
+        
+        dialogMessage.addAction(ok)
+
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+}
+
+extension Optional where Wrapped == String {
+    
+    func ifNotNullOrEmpty(defaultValue: String = "")-> String{
+        
+        if self?.isEmpty == true || self == nil{
+            return defaultValue
+        }
+        
+        return self!
+        
+    }
+    
+}

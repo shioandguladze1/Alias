@@ -48,6 +48,12 @@ class TimeAndPointsViewController: BaseViewController {
         seekBar.translatesAutoresizingMaskIntoConstraints = false
         return seekBar
     }()
+    
+    private let continueButton: UIButton = {
+        let button = getRoundButtonWithIcon(size: 60, padding: 40, iconName: "arrow.right")
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +68,7 @@ class TimeAndPointsViewController: BaseViewController {
         setUpPointsSlider()
         setUpTimeValueLabel()
         setUpPointsValueLabel()
+        setUpContinueButton()
     }
     
     private func setUpViews(){
@@ -69,6 +76,21 @@ class TimeAndPointsViewController: BaseViewController {
         classicButton = getGameModeButton(forKey: classKey!, direction: .Right)
         view.addSubview(arcadeButton!)
         view.addSubview(classicButton!)
+    }
+    
+    private func setUpContinueButton(){
+        view.addSubview(continueButton)
+        
+        NSLayoutConstraint.activate(
+            [
+                continueButton.rightAnchor.constraint(equalTo: view.layoutMarginsGuide.rightAnchor, constant: -12),
+                continueButton.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
+                continueButton.widthAnchor.constraint(equalToConstant: 60),
+                continueButton.heightAnchor.constraint(equalToConstant: 60)
+            ]
+        )
+        
+        continueButton.addTarget(self, action: #selector(startGame), for: .touchUpInside)
     }
     
     private func setUpTimeValueLabel(){
@@ -215,6 +237,12 @@ class TimeAndPointsViewController: BaseViewController {
             }
         }
      
+    }
+    
+    @objc private func startGame(){
+        game.time = Int(timeSlider.value)
+        game.points = Int(pointsSlider.value)
+        navigationController?.pushViewController(ClassicGameViewController(), animated: true)
     }
     
     @objc func updateValue(_ view: MTCircularSlider){

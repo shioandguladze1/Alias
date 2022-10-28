@@ -69,11 +69,14 @@ func getTeamTextField(id: Int)-> UITextField{
     teamTextField.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner]
     teamTextField.backgroundColor = GlobalColorProvider.getColor(color: .darkBlue).asUIColor()
     teamTextField.clipsToBounds = true
+    teamTextField.translatesAutoresizingMaskIntoConstraints = false
+    teamTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+    teamTextField.textColor = .white
+    teamTextField.font = .systemFont(ofSize: 28)
     
-    let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
+    let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: 1))
     teamTextField.leftView = paddingView
     teamTextField.leftViewMode = .always
-    teamTextField.transform = CGAffineTransform(scaleX: 1, y: -1)
     
     teamTextField.text = "Team\(id)"
     return teamTextField

@@ -60,6 +60,11 @@ class TeamsViewController: UIViewController {
         setUpContinueButton()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        saveTeams()
+    }
+    
     private func setUpContinueButton(){
         view.addSubview(continueButton)
         
@@ -71,6 +76,8 @@ class TeamsViewController: UIViewController {
                 continueButton.heightAnchor.constraint(equalToConstant: 60)
             ]
         )
+        
+        continueButton.addTarget(self, action: #selector(navigateToTimeAndPoints), for: .touchUpInside)
     }
     
     private func setUpImageView(){
@@ -90,14 +97,16 @@ class TeamsViewController: UIViewController {
     private func setUpTeamsStackView(){
         view.addSubview(teamsStackView)
         teamsStackView.backgroundColor = .clear
+        teamsStackView.spacing = 8
+        teamsStackView.addArrangedSubview(getTeamTextField(id: 1))
+        teamsStackView.addArrangedSubview(getTeamTextField(id: 2))
+        
         NSLayoutConstraint.activate([
             teamsStackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32),
             teamsStackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32),
-            teamsStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height * 0.1 + 8),
             teamsStackView.bottomAnchor.constraint(equalTo: classicSnakeButton.topAnchor, constant: -8)
         ])
         
-        teamsStackView.transform = CGAffineTransform(scaleX: 1, y: -1)
     }
     
     private func setUpAddButton(){
@@ -144,6 +153,27 @@ class TeamsViewController: UIViewController {
         arcadeSnakeButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeGameMode(_:))))
     }
     
+    private func saveTeams(){
+        var teams = [Team]()
+        var id = 1
+        
+        teamsStackView.arrangedSubviews.forEach { view in
+            
+            if let textField = view as? UITextField {
+                let text = textField.text.ifNotNullOrEmpty(defaultValue: "Team\(id)")
+                teams.append(Team(id: id, name: text))
+                id += 1
+            }
+            
+        }
+        
+        game.teams = teams
+    }
+    
+    @objc private func navigateToTimeAndPoints(){
+        (parent as? ViewController)?.navigateForward(index: 2)
+    }
+    
     @objc private func addTeams(){
         let teams = teamsStackView.arrangedSubviews
         
@@ -153,7 +183,7 @@ class TeamsViewController: UIViewController {
             imageView.hideWithFade(duration: 0.2)
         }
         
-        let currentNumber = teams.count
+        let currentNumber = teams.count + 1
         teamsStackView.addArrangedSubview(getTeamTextField(id: currentNumber))
     }
     

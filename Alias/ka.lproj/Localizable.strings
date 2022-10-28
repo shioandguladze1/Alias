@@ -26,3 +26,5 @@
 
 "time" = "დრო";
 "points" = "ქულები";
+
+"db_table_name" = "words_ge";

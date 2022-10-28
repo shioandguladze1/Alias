@@ -25,8 +25,10 @@ class ViewController: UIPageViewController {
         setViewControllers([c1], direction: .forward, animated: true)
         
     }
-
-
+    
+    func navigateForward(index: Int){
+        setViewControllers([controllers[index]], direction: .forward, animated: true)
+    }
     
 }
 

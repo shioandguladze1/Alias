@@ -19,6 +19,11 @@ class Game{
         }
     }
     var teams: [Team] = []
+    var bonusRoundTeams = [Team]()
+    var time: Int = 60
+    var points: Int = 30
+    var isBonusRound = false
+    var currentTeamIndex = 0
     
     static let notificationName = NSNotification.Name("Game")
     static var instance: Game?

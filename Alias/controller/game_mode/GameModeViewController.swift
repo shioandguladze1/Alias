@@ -74,6 +74,7 @@ class GameModeViewController: BaseViewController {
     
     @objc func changeGameMode(_ sender: UITapGestureRecognizer? = nil){
         switch sender?.view?.tag{
+            
         case 0:
             game?.gameMode = .Classic
         case 1:
@@ -81,7 +82,8 @@ class GameModeViewController: BaseViewController {
         default:
             break
         }
-                
+        
+        (parent as? ViewController)?.navigateForward(index: 1)
     }
     
     @objc private func changeButtonColors(){

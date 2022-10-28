@@ -41,7 +41,7 @@ extension UIView {
     func makeOval(){
         let maxSize = max(frame.height, frame.width)
         layer.cornerRadius = maxSize / 2
-        layer.sublayers?.forEach { $0.cornerRadius = maxSize / 2 }
+        clipsToBounds = true
     }
     
 }

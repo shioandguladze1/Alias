@@ -16,13 +16,13 @@
 		9578205528E6E73E004C1CE4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578205428E6E73E004C1CE4 /* Theme.swift */; };
 		9578205C28E6F5F3004C1CE4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9578205E28E6F5F3004C1CE4 /* Localizable.strings */; };
 		9578206328E6F7BC004C1CE4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578206228E6F7BC004C1CE4 /* Extensions.swift */; };
+		95785930290BE61D0035C8C6 /* ClassicGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578592F290BE61D0035C8C6 /* ClassicGameViewController.swift */; };
+		95785934290BFAAE0035C8C6 /* OptionsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95785933290BFAAE0035C8C6 /* OptionsLabel.swift */; };
 		957CAB0D28F045EE00B972CD /* SnakeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CAB0C28F045EE00B972CD /* SnakeButton.swift */; };
 		957CAB1028F0481E00B972CD /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CAB0F28F0481E00B972CD /* TeamsViewController.swift */; };
 		957FCB842909372B0006FABC /* TimeAndPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957FCB832909372B0006FABC /* TimeAndPointsViewController.swift */; };
 		957FCB8A29093DFA0006FABC /* CircularSeekBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957FCB8929093DFA0006FABC /* CircularSeekBar.swift */; };
 		9589D9D728E6FBFB005A48C5 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589D9D628E6FBFB005A48C5 /* Localization.swift */; };
-		958D8E192902A9F00022DCE3 /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D8E172902A9EF0022DCE3 /* TeamsTableViewCell.swift */; };
-		958D8E1A2902A9F00022DCE3 /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958D8E182902A9F00022DCE3 /* TeamsTableViewCell.xib */; };
 		958FD1E8290AB69700E8B2AE /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958FD1E7290AB69700E8B2AE /* Team.swift */; };
 		9592BEAD28E598F4004E1C6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEAC28E598F4004E1C6B /* AppDelegate.swift */; };
 		9592BEAF28E598F4004E1C6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEAE28E598F4004E1C6B /* SceneDelegate.swift */; };
@@ -64,13 +64,13 @@
 		9578205F28E6F6A6004C1CE4 /* ka */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ka; path = ka.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9578206028E6F6AA004C1CE4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9578206228E6F7BC004C1CE4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9578592F290BE61D0035C8C6 /* ClassicGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicGameViewController.swift; sourceTree = "<group>"; };
+		95785933290BFAAE0035C8C6 /* OptionsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsLabel.swift; sourceTree = "<group>"; };
 		957CAB0C28F045EE00B972CD /* SnakeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeButton.swift; sourceTree = "<group>"; };
 		957CAB0F28F0481E00B972CD /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		957FCB832909372B0006FABC /* TimeAndPointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndPointsViewController.swift; sourceTree = "<group>"; };
 		957FCB8929093DFA0006FABC /* CircularSeekBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSeekBar.swift; sourceTree = "<group>"; };
 		9589D9D628E6FBFB005A48C5 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
-		958D8E172902A9EF0022DCE3 /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
-		958D8E182902A9F00022DCE3 /* TeamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsTableViewCell.xib; sourceTree = "<group>"; };
 		958FD1E7290AB69700E8B2AE /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		9592BEA928E598F4004E1C6B /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9592BEAC28E598F4004E1C6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +148,7 @@
 		95750B5428EB04B8007CB897 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				9578592E290BE6060035C8C6 /* classic_game */,
 				957FCB822909370B0006FABC /* time_and_points */,
 				957CAB0E28F0480C00B972CD /* teams */,
 				959C3BA528EC60D5006E849B /* game_mode */,
@@ -186,6 +187,14 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		9578592E290BE6060035C8C6 /* classic_game */ = {
+			isa = PBXGroup;
+			children = (
+				9578592F290BE61D0035C8C6 /* ClassicGameViewController.swift */,
+			);
+			path = classic_game;
+			sourceTree = "<group>";
+		};
 		957CAB0B28F045DE00B972CD /* button */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +206,6 @@
 		957CAB0E28F0480C00B972CD /* teams */ = {
 			isa = PBXGroup;
 			children = (
-				958D8E122902A4DA0022DCE3 /* cell */,
 				957CAB0F28F0481E00B972CD /* TeamsViewController.swift */,
 			);
 			path = teams;
@@ -217,15 +225,6 @@
 				957FCB8929093DFA0006FABC /* CircularSeekBar.swift */,
 			);
 			path = seek_bar;
-			sourceTree = "<group>";
-		};
-		958D8E122902A4DA0022DCE3 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				958D8E172902A9EF0022DCE3 /* TeamsTableViewCell.swift */,
-				958D8E182902A9F00022DCE3 /* TeamsTableViewCell.xib */,
-			);
-			path = cell;
 			sourceTree = "<group>";
 		};
 		9592BEA028E598F4004E1C6B = {
@@ -336,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				959E81A028EF2CBD008D49B1 /* PaddingLabel.swift */,
+				95785933290BFAAE0035C8C6 /* OptionsLabel.swift */,
 			);
 			path = label;
 			sourceTree = "<group>";
@@ -420,7 +420,6 @@
 				9578205C28E6F5F3004C1CE4 /* Localizable.strings in Resources */,
 				9592BEBC28E598F6004E1C6B /* LaunchScreen.storyboard in Resources */,
 				9592BEB928E598F6004E1C6B /* Assets.xcassets in Resources */,
-				958D8E1A2902A9F00022DCE3 /* TeamsTableViewCell.xib in Resources */,
 				9592BEB428E598F4004E1C6B /* Main.storyboard in Resources */,
 				9592BEC628E59DD0004E1C6B /* words.db in Resources */,
 				959C3BA028EC429E006E849B /* RulesTableViewCell.xib in Resources */,
@@ -477,9 +476,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				957FCB8A29093DFA0006FABC /* CircularSeekBar.swift in Sources */,
+				95785930290BE61D0035C8C6 /* ClassicGameViewController.swift in Sources */,
 				95750B5028EAFF16007CB897 /* Observable.swift in Sources */,
 				9592BEB728E598F4004E1C6B /* Alias.xcdatamodeld in Sources */,
-				958D8E192902A9F00022DCE3 /* TeamsTableViewCell.swift in Sources */,
 				959C3BA228EC45E7006E849B /* TableViewAdapter.swift in Sources */,
 				95750B5628EB04C9007CB897 /* HomeScreenController.swift in Sources */,
 				959C3B9928EC424D006E849B /* Rule.swift in Sources */,
@@ -503,6 +502,7 @@
 				9592BEAD28E598F4004E1C6B /* AppDelegate.swift in Sources */,
 				9592BECC28E5A196004E1C6B /* WordsDataBaseHelper.swift in Sources */,
 				9592BEAF28E598F4004E1C6B /* SceneDelegate.swift in Sources */,
+				95785934290BFAAE0035C8C6 /* OptionsLabel.swift in Sources */,
 				957CAB1028F0481E00B972CD /* TeamsViewController.swift in Sources */,
 				95750B4E28EAFEFB007CB897 /* LiveData.swift in Sources */,
 				957CAB0D28F045EE00B972CD /* SnakeButton.swift in Sources */,
