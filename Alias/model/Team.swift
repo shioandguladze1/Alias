@@ -10,6 +10,7 @@ import Foundation
 class Team {
     let id: Int
     let name: String
+    var isWinning = false
     var points = 0
     
     init(id: Int, name: String){

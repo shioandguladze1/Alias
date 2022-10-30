@@ -24,6 +24,11 @@
 		957FCB8A29093DFA0006FABC /* CircularSeekBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957FCB8929093DFA0006FABC /* CircularSeekBar.swift */; };
 		9589D9D728E6FBFB005A48C5 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589D9D628E6FBFB005A48C5 /* Localization.swift */; };
 		958FD1E8290AB69700E8B2AE /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958FD1E7290AB69700E8B2AE /* Team.swift */; };
+		9590D3DC290E76250060197F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590D3DB290E76250060197F /* Round.swift */; };
+		9590D3DF290EA37B0060197F /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 9590D3DE290EA37B0060197F /* BottomSheet */; };
+		9590D3E3290EAF670060197F /* StatsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590D3E2290EAF670060197F /* StatsCollectionView.swift */; };
+		9590D3EB290EBF470060197F /* TeamStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590D3EA290EBF470060197F /* TeamStatsView.swift */; };
+		9590D3EE290EDCC70060197F /* NextRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590D3ED290EDCC70060197F /* NextRoundView.swift */; };
 		9592BEAD28E598F4004E1C6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEAC28E598F4004E1C6B /* AppDelegate.swift */; };
 		9592BEAF28E598F4004E1C6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEAE28E598F4004E1C6B /* SceneDelegate.swift */; };
 		9592BEB128E598F4004E1C6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEB028E598F4004E1C6B /* ViewController.swift */; };
@@ -72,6 +77,10 @@
 		957FCB8929093DFA0006FABC /* CircularSeekBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSeekBar.swift; sourceTree = "<group>"; };
 		9589D9D628E6FBFB005A48C5 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		958FD1E7290AB69700E8B2AE /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		9590D3DB290E76250060197F /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
+		9590D3E2290EAF670060197F /* StatsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCollectionView.swift; sourceTree = "<group>"; };
+		9590D3EA290EBF470060197F /* TeamStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStatsView.swift; sourceTree = "<group>"; };
+		9590D3ED290EDCC70060197F /* NextRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRoundView.swift; sourceTree = "<group>"; };
 		9592BEA928E598F4004E1C6B /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9592BEAC28E598F4004E1C6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9592BEAE28E598F4004E1C6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACE3AC4D0DD5F47C6CBE49E /* Pods_Alias.framework in Frameworks */,
+				9590D3DF290EA37B0060197F /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				9578592E290BE6060035C8C6 /* classic_game */,
+				9590D3E1290EAF430060197F /* bottom_sheet_views */,
 				957FCB822909370B0006FABC /* time_and_points */,
 				957CAB0E28F0480C00B972CD /* teams */,
 				959C3BA528EC60D5006E849B /* game_mode */,
@@ -175,6 +186,7 @@
 				959C3BA128EC45E7006E849B /* TableViewAdapter.swift */,
 				959C3BA328EC45F4006E849B /* TableViewAdapterCell.swift */,
 				959E81A428EF308F008D49B1 /* GlobalViewProvider.swift */,
+				9590D3EA290EBF470060197F /* TeamStatsView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -225,6 +237,31 @@
 				957FCB8929093DFA0006FABC /* CircularSeekBar.swift */,
 			);
 			path = seek_bar;
+			sourceTree = "<group>";
+		};
+		9590D3E1290EAF430060197F /* bottom_sheet_views */ = {
+			isa = PBXGroup;
+			children = (
+				9590D3E4290EB0510060197F /* stats */,
+			);
+			path = bottom_sheet_views;
+			sourceTree = "<group>";
+		};
+		9590D3E4290EB0510060197F /* stats */ = {
+			isa = PBXGroup;
+			children = (
+				9590D3EC290EDCAA0060197F /* next_round_view */,
+				9590D3E2290EAF670060197F /* StatsCollectionView.swift */,
+			);
+			path = stats;
+			sourceTree = "<group>";
+		};
+		9590D3EC290EDCAA0060197F /* next_round_view */ = {
+			isa = PBXGroup;
+			children = (
+				9590D3ED290EDCC70060197F /* NextRoundView.swift */,
+			);
+			path = next_round_view;
 			sourceTree = "<group>";
 		};
 		9592BEA028E598F4004E1C6B = {
@@ -282,6 +319,7 @@
 				959C3B9828EC424D006E849B /* Rule.swift */,
 				959E81A628EF4063008D49B1 /* Game.swift */,
 				958FD1E7290AB69700E8B2AE /* Team.swift */,
+				9590D3DB290E76250060197F /* Round.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -369,6 +407,7 @@
 			);
 			name = Alias;
 			packageProductDependencies = (
+				9590D3DE290EA37B0060197F /* BottomSheet */,
 			);
 			productName = Alias;
 			productReference = 9592BEA928E598F4004E1C6B /* Alias.app */;
@@ -401,7 +440,7 @@
 			);
 			mainGroup = 9592BEA028E598F4004E1C6B;
 			packageReferences = (
-				95750B5D28EB1F07007CB897 /* XCRemoteSwiftPackageReference "iOSDropDown" */,
+				9590D3DD290EA37B0060197F /* XCRemoteSwiftPackageReference "BottomSheet" */,
 			);
 			productRefGroup = 9592BEAA28E598F4004E1C6B /* Products */;
 			projectDirPath = "";
@@ -476,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				957FCB8A29093DFA0006FABC /* CircularSeekBar.swift in Sources */,
+				9590D3EB290EBF470060197F /* TeamStatsView.swift in Sources */,
 				95785930290BE61D0035C8C6 /* ClassicGameViewController.swift in Sources */,
 				95750B5028EAFF16007CB897 /* Observable.swift in Sources */,
 				9592BEB728E598F4004E1C6B /* Alias.xcdatamodeld in Sources */,
@@ -483,12 +523,14 @@
 				95750B5628EB04C9007CB897 /* HomeScreenController.swift in Sources */,
 				959C3B9928EC424D006E849B /* Rule.swift in Sources */,
 				957FCB842909372B0006FABC /* TimeAndPointsViewController.swift in Sources */,
+				9590D3EE290EDCC70060197F /* NextRoundView.swift in Sources */,
 				959C3B9F28EC429E006E849B /* RulesTableViewCell.swift in Sources */,
 				9592BEB128E598F4004E1C6B /* ViewController.swift in Sources */,
 				959E81A728EF4063008D49B1 /* Game.swift in Sources */,
 				959C3B9728EC41FA006E849B /* RulesViewController.swift in Sources */,
 				9578205528E6E73E004C1CE4 /* Theme.swift in Sources */,
 				959E81A128EF2CBD008D49B1 /* PaddingLabel.swift in Sources */,
+				9590D3DC290E76250060197F /* Round.swift in Sources */,
 				95750B5928EB04E0007CB897 /* BaseViewController.swift in Sources */,
 				9578206328E6F7BC004C1CE4 /* Extensions.swift in Sources */,
 				95750B5228EAFF1F007CB897 /* Observer.swift in Sources */,
@@ -501,6 +543,7 @@
 				95756B9428EAE6300087A408 /* Graphics.swift in Sources */,
 				9592BEAD28E598F4004E1C6B /* AppDelegate.swift in Sources */,
 				9592BECC28E5A196004E1C6B /* WordsDataBaseHelper.swift in Sources */,
+				9590D3E3290EAF670060197F /* StatsCollectionView.swift in Sources */,
 				9592BEAF28E598F4004E1C6B /* SceneDelegate.swift in Sources */,
 				95785934290BFAAE0035C8C6 /* OptionsLabel.swift in Sources */,
 				957CAB1028F0481E00B972CD /* TeamsViewController.swift in Sources */,
@@ -742,15 +785,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		95750B5D28EB1F07007CB897 /* XCRemoteSwiftPackageReference "iOSDropDown" */ = {
+		9590D3DD290EA37B0060197F /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jriosdev/iOSDropDown.git";
+			repositoryURL = "https://github.com/joomcode/BottomSheet";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9590D3DE290EA37B0060197F /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9590D3DD290EA37B0060197F /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9592BEB528E598F4004E1C6B /* Alias.xcdatamodeld */ = {

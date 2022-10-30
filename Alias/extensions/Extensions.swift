@@ -28,6 +28,12 @@ extension UIView {
         }
     }
     
+    func setChildImageViewImage(image: UIImage){
+        subviews.forEach { view in
+            (view as? UIImageView)?.image = image
+        }
+    }
+    
 }
 
 extension UIViewController {
@@ -44,6 +50,34 @@ extension UIViewController {
         self.present(dialogMessage, animated: true, completion: nil)
     }
     
+    func showBottomSheetview(height: CGFloat, bottomView: UIView, footerView: UIView? = nil, footerHeight: CGFloat = 0)-> UIViewController{
+        let bottomSheetController = UIViewController()
+        bottomSheetController.view.addSubview(bottomView)
+        bottomView.translatesAutoresizingMaskIntoConstraints = false
+        var bottomAnchor = bottomSheetController.view.bottomAnchor
+        if let footerView = footerView {
+            bottomSheetController.view.addSubview(footerView)
+            bottomAnchor = footerView.topAnchor
+            footerView.translatesAutoresizingMaskIntoConstraints = false
+
+            NSLayoutConstraint.activate([
+                footerView.bottomAnchor.constraint(equalTo: bottomSheetController.view.bottomAnchor),
+                footerView.widthAnchor.constraint(equalTo: bottomSheetController.view.widthAnchor),
+                footerView.heightAnchor.constraint(equalToConstant: footerHeight)
+            ])
+        }
+        
+        NSLayoutConstraint.activate([
+            bottomView.widthAnchor.constraint(equalTo: bottomSheetController.view.widthAnchor),
+            bottomView.topAnchor.constraint(equalTo: bottomSheetController.view.topAnchor),
+            bottomView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            bottomView.heightAnchor.constraint(equalToConstant: height)
+        ])
+
+        bottomSheetController.preferredContentSize.height = height + footerHeight
+        presentBottomSheet(viewController: bottomSheetController, configuration: .default)
+        return bottomSheetController
+    }
 }
 
 extension Optional where Wrapped == String {
