@@ -242,7 +242,8 @@ class TimeAndPointsViewController: BaseViewController {
     @objc private func startGame(){
         game.time = Int(timeSlider.value)
         game.points = Int(pointsSlider.value)
-        navigationController?.pushViewController(ClassicGameViewController(), animated: true)
+        let target = game.gameMode == .Classic ? ClassicGameViewController() : ArcadeGameViewController()
+        navigationController?.pushViewController(target, animated: true)
     }
     
     @objc func updateValue(_ view: MTCircularSlider){

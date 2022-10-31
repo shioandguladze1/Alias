@@ -26,6 +26,7 @@ class Game{
     var currentTeamIndex = -1
     var roundLiveData = LiveData<Round>()
     var roundFinished = true
+    var winningTeamIndex = 0
     
     static let notificationName = NSNotification.Name("Game")
     static var instance: Game?
@@ -41,6 +42,7 @@ class Game{
     func submitRound(teamPoints: Int){
         teams[currentTeamIndex].points = teamPoints
         roundFinished = true
+        markWinningTeam()
     }
     
     func loadNextRound(){
@@ -55,6 +57,25 @@ class Game{
         }else{
             checkBonusRoundResults()
         }
+    }
+    
+    private func markWinningTeam(){
+        var maxPoints = -1
+        var winningTeamIndex = -1
+        
+        for i in 0..<teams.count {
+            let team = teams[i]
+            
+            if team.points > maxPoints {
+                winningTeamIndex = i
+                maxPoints = team.points
+            }
+            
+            team.isWinning = false
+        }
+        
+        teams[winningTeamIndex].isWinning = true
+        self.winningTeamIndex = winningTeamIndex
     }
     
     private func checkBonusRoundResults(){
@@ -103,6 +124,8 @@ class Game{
     
     func endGame(){
         print("game finished")
+        let ragaca: String? = nil
+        print(ragaca!)
     }
     
 }

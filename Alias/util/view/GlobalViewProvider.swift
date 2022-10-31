@@ -47,14 +47,21 @@ func getGameModeButton(forKey: String, direction: Direction)-> PaddingLabel{
     return label
 }
 
-func getRoundButtonWithIcon(size: Int, padding: Int, iconName: String)-> UIButton {
+func getRoundButtonWithIcon(size: Int, padding: CGFloat, iconName: String)-> UIButton {
     let button = UIButton()
     button.frame = CGRect(x: 0, y: 0, width: size, height: size)
     let imageView = UIImageView()
     imageView.image = UIImage(systemName: iconName)
     button.addSubview(imageView)
-    imageView.frame = CGRect(x: 0, y: 0, width: size - padding, height: size - padding)
-    imageView.center = button.center
+    imageView.translatesAutoresizingMaskIntoConstraints = false
+    
+    NSLayoutConstraint.activate([
+        imageView.widthAnchor.constraint(equalTo: button.widthAnchor, constant: -padding),
+        imageView.heightAnchor.constraint(equalTo: button.heightAnchor, constant: -padding),
+        imageView.centerXAnchor.constraint(equalTo: button.centerXAnchor),
+        imageView.centerYAnchor.constraint(equalTo: button.centerYAnchor)
+    ])
+    
     imageView.tintColor = .white
     imageView.contentMode = .scaleAspectFit
     button.layer.cornerRadius = CGFloat(size / 2)
