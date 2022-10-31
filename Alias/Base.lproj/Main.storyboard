@@ -195,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="2518.840579710145" y="95.758928571428569"/>
         </scene>
-        <!--Classic Game View Controller-->
+        <!--Arcade Game View Controller-->
         <scene sceneID="NPG-f6-eBR">
             <objects>
-                <viewController id="ctT-cR-D7H" customClass="ClassicGameViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ctT-cR-D7H" customClass="ArcadeGameViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="68u-hQ-EFg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

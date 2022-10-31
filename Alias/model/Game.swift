@@ -84,7 +84,7 @@ class Game{
     
     private func loadBonusRoundTeamsOrEndGame(){
         teams.forEach { team in
-            if team.points > points {
+            if team.points >= points {
                 bonusRoundTeams.append(team)
             }
         }

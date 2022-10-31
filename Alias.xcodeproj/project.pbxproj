@@ -18,6 +18,7 @@
 		9578206328E6F7BC004C1CE4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578206228E6F7BC004C1CE4 /* Extensions.swift */; };
 		95785930290BE61D0035C8C6 /* ClassicGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578592F290BE61D0035C8C6 /* ClassicGameViewController.swift */; };
 		95785934290BFAAE0035C8C6 /* OptionsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95785933290BFAAE0035C8C6 /* OptionsLabel.swift */; };
+		9579B72029101B1B0058402E /* ArcadeGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9579B71F29101B1B0058402E /* ArcadeGameViewController.swift */; };
 		957CAB0D28F045EE00B972CD /* SnakeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CAB0C28F045EE00B972CD /* SnakeButton.swift */; };
 		957CAB1028F0481E00B972CD /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CAB0F28F0481E00B972CD /* TeamsViewController.swift */; };
 		957FCB842909372B0006FABC /* TimeAndPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957FCB832909372B0006FABC /* TimeAndPointsViewController.swift */; };
@@ -49,6 +50,7 @@
 		959E81A328EF3063008D49B1 /* GameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E81A228EF3063008D49B1 /* GameModeViewController.swift */; };
 		959E81A528EF308F008D49B1 /* GlobalViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E81A428EF308F008D49B1 /* GlobalViewProvider.swift */; };
 		959E81A728EF4063008D49B1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E81A628EF4063008D49B1 /* Game.swift */; };
+		959FDF53290FCB6D008FD0C9 /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959FDF52290FCB6D008FD0C9 /* BaseGameViewController.swift */; };
 		AACE3AC4D0DD5F47C6CBE49E /* Pods_Alias.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DE0ED972E05C10F86CABC4 /* Pods_Alias.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,7 @@
 		9578206228E6F7BC004C1CE4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9578592F290BE61D0035C8C6 /* ClassicGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicGameViewController.swift; sourceTree = "<group>"; };
 		95785933290BFAAE0035C8C6 /* OptionsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsLabel.swift; sourceTree = "<group>"; };
+		9579B71F29101B1B0058402E /* ArcadeGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadeGameViewController.swift; sourceTree = "<group>"; };
 		957CAB0C28F045EE00B972CD /* SnakeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeButton.swift; sourceTree = "<group>"; };
 		957CAB0F28F0481E00B972CD /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		957FCB832909372B0006FABC /* TimeAndPointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndPointsViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		959E81A228EF3063008D49B1 /* GameModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeViewController.swift; sourceTree = "<group>"; };
 		959E81A428EF308F008D49B1 /* GlobalViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalViewProvider.swift; sourceTree = "<group>"; };
 		959E81A628EF4063008D49B1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		959FDF52290FCB6D008FD0C9 /* BaseGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameViewController.swift; sourceTree = "<group>"; };
 		CD48B761F80098C30463FC0D /* Pods-Alias.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alias.release.xcconfig"; path = "Target Support Files/Pods-Alias/Pods-Alias.release.xcconfig"; sourceTree = "<group>"; };
 		E3DE0ED972E05C10F86CABC4 /* Pods_Alias.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alias.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,6 +162,8 @@
 		95750B5428EB04B8007CB897 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				9579B71E29101B0C0058402E /* arcade_game */,
+				959FDF51290FCB51008FD0C9 /* base_game_controller */,
 				9578592E290BE6060035C8C6 /* classic_game */,
 				9590D3E1290EAF430060197F /* bottom_sheet_views */,
 				957FCB822909370B0006FABC /* time_and_points */,
@@ -205,6 +211,14 @@
 				9578592F290BE61D0035C8C6 /* ClassicGameViewController.swift */,
 			);
 			path = classic_game;
+			sourceTree = "<group>";
+		};
+		9579B71E29101B0C0058402E /* arcade_game */ = {
+			isa = PBXGroup;
+			children = (
+				9579B71F29101B1B0058402E /* ArcadeGameViewController.swift */,
+			);
+			path = arcade_game;
 			sourceTree = "<group>";
 		};
 		957CAB0B28F045DE00B972CD /* button */ = {
@@ -378,6 +392,14 @@
 			path = label;
 			sourceTree = "<group>";
 		};
+		959FDF51290FCB51008FD0C9 /* base_game_controller */ = {
+			isa = PBXGroup;
+			children = (
+				959FDF52290FCB6D008FD0C9 /* BaseGameViewController.swift */,
+			);
+			path = base_game_controller;
+			sourceTree = "<group>";
+		};
 		95A262B128E6DFBA0023795B /* style */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +545,7 @@
 				95750B5628EB04C9007CB897 /* HomeScreenController.swift in Sources */,
 				959C3B9928EC424D006E849B /* Rule.swift in Sources */,
 				957FCB842909372B0006FABC /* TimeAndPointsViewController.swift in Sources */,
+				9579B72029101B1B0058402E /* ArcadeGameViewController.swift in Sources */,
 				9590D3EE290EDCC70060197F /* NextRoundView.swift in Sources */,
 				959C3B9F28EC429E006E849B /* RulesTableViewCell.swift in Sources */,
 				9592BEB128E598F4004E1C6B /* ViewController.swift in Sources */,
@@ -545,6 +568,7 @@
 				9592BECC28E5A196004E1C6B /* WordsDataBaseHelper.swift in Sources */,
 				9590D3E3290EAF670060197F /* StatsCollectionView.swift in Sources */,
 				9592BEAF28E598F4004E1C6B /* SceneDelegate.swift in Sources */,
+				959FDF53290FCB6D008FD0C9 /* BaseGameViewController.swift in Sources */,
 				95785934290BFAAE0035C8C6 /* OptionsLabel.swift in Sources */,
 				957CAB1028F0481E00B972CD /* TeamsViewController.swift in Sources */,
 				95750B4E28EAFEFB007CB897 /* LiveData.swift in Sources */,
