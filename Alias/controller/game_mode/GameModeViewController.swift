@@ -10,6 +10,8 @@ import UIKit
 class GameModeViewController: BaseViewController {
     private var arcadeButton: PaddingLabel?
     private var classicButton: PaddingLabel?
+    private var game: Game?
+
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = GlobalColorProvider.getColor(color: .SecondWhite).asUIColor()
@@ -17,7 +19,12 @@ class GameModeViewController: BaseViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    private var game: Game?
+    
+    private let sceneImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        return iv
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +35,7 @@ class GameModeViewController: BaseViewController {
         setUpClassicButton()
         setUpTitleLabel()
         addGameModeObserver()
+        setUpSceneImageView()
     }
     
     private func setUpViews(){
@@ -43,6 +51,22 @@ class GameModeViewController: BaseViewController {
         titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height * 0.1).isActive = true
         titleLabel.text = "choose_game_mode".localized()
         titleLabel.sizeToFit()
+    }
+    
+    private func setUpSceneImageView(){
+        guard let classicButton = classicButton else {
+            return
+        }
+        
+        view.addSubview(sceneImageView)
+        sceneImageView.image = UIImage(named: "game_mode_scene")
+        
+        NSLayoutConstraint.activate([
+            sceneImageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -32),
+            sceneImageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 32),
+            sceneImageView.bottomAnchor.constraint(equalTo: classicButton.topAnchor, constant: -32),
+            sceneImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 32),
+        ])
     }
     
     private func setUpArcadeButton(){

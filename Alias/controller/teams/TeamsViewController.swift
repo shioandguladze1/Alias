@@ -82,7 +82,7 @@ class TeamsViewController: UIViewController {
     
     private func setUpImageView(){
         view.addSubview(imageView)
-        imageView.backgroundColor = .brown
+        imageView.image = UIImage(named: "teams_scene")
         
         NSLayoutConstraint.activate(
             [

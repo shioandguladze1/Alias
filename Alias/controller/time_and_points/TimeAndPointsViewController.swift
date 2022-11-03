@@ -54,6 +54,12 @@ class TimeAndPointsViewController: BaseViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    private let sceneImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        return iv
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +75,7 @@ class TimeAndPointsViewController: BaseViewController {
         setUpTimeValueLabel()
         setUpPointsValueLabel()
         setUpContinueButton()
+        setUpSceneImageView()
     }
     
     private func setUpViews(){
@@ -76,6 +83,19 @@ class TimeAndPointsViewController: BaseViewController {
         classicButton = getGameModeButton(forKey: classKey!, direction: .Right)
         view.addSubview(arcadeButton!)
         view.addSubview(classicButton!)
+    }
+    
+    private func setUpSceneImageView(){
+        view.addSubview(sceneImageView)
+        
+        sceneImageView.image = UIImage(named: "time_and_points_scene")
+        
+        NSLayoutConstraint.activate([
+            sceneImageView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            sceneImageView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            sceneImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
+            sceneImageView.heightAnchor.constraint(equalTo: sceneImageView.widthAnchor, multiplier: 1.1)
+        ])
     }
     
     private func setUpContinueButton(){
