@@ -39,6 +39,10 @@ class Game{
         return instance
     }
     
+    func reset(){
+        Self.instance = Game()
+    }
+    
     func submitRound(teamPoints: Int){
         teams[currentTeamIndex].points = teamPoints
         roundFinished = true

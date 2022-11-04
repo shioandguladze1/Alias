@@ -70,8 +70,7 @@ extension UIViewController {
         NSLayoutConstraint.activate([
             bottomView.widthAnchor.constraint(equalTo: bottomSheetController.view.widthAnchor),
             bottomView.topAnchor.constraint(equalTo: bottomSheetController.view.topAnchor),
-            bottomView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            bottomView.heightAnchor.constraint(equalToConstant: height)
+            bottomView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
 
         bottomSheetController.preferredContentSize.height = height + footerHeight

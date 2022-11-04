@@ -57,7 +57,7 @@ class NextRoundView: UIView {
         
         nextRoundLabel.textColor = .white
         nextRoundLabel.font = .systemFont(ofSize: 20)
-        nextRoundLabel.text = "შემდეგი რაუნდი"
+        nextRoundLabel.text = "next_round".localized()
         
         NSLayoutConstraint.activate([
             nextRoundLabel.centerYAnchor.constraint(equalTo: nextRoundButton.centerYAnchor),

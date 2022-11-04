@@ -7,9 +7,11 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     private var observer: Observer<Localization>?
     var classKey: String?
+    
+    var isBackNavigationEnabled: Bool { true }
     
     private let loaderView: UIView = {
         let view = UIView()
@@ -23,12 +25,15 @@ class BaseViewController: UIViewController {
         view.color = .white
         return view
     }()
+    
+    private var backGestureRecognizer: UIScreenEdgePanGestureRecognizer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         observer = Observer{_ in self.setTexts() }
         localizationLiveData.addObserver(observer: observer!)
         classKey = String(describing: self)
+        setUpBackGestureRecognizer()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -36,8 +41,28 @@ class BaseViewController: UIViewController {
         localizationLiveData.removeObserver(observer: observer!)
     }
     
+    private func setUpBackGestureRecognizer(){
+        if !isBackNavigationEnabled {
+            return
+        }
+        
+        backGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(onBackPressed(sender:)))
+        backGestureRecognizer!.edges = .left
+        view.addGestureRecognizer(backGestureRecognizer!)
+    }
+    
     func setTexts(){
         
+    }
+    
+    @objc func onBackPressed(sender: UIScreenEdgePanGestureRecognizer){
+        if sender.state == .ended {
+            
+            if navigationController?.viewControllers.count ?? 0 > 1 {
+                navigationController?.popViewController(animated: true)
+            }
+            
+        }
     }
     
     func showLoader(){

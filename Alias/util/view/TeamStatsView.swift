@@ -39,7 +39,7 @@ class TeamStatsView: UIView {
     func setUp(team: Team){
         teamNameLabel.text = team.name
         teamScoreLabel.text = String(team.points)
-        teamWinningImageview.image = team.isWinning ? UIImage(systemName: "crown") : nil
+        teamWinningImageview.image = team.isWinning ? UIImage(named: "first_position") : nil
     }
     
     private func initUI(){

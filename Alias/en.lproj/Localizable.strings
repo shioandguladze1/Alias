@@ -28,3 +28,6 @@
 "points" = "Points";
 
 "db_table_name" = "words_en";
+
+"score" = "Score";
+"next_round" = "Start Next Round";

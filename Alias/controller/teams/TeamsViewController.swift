@@ -7,8 +7,9 @@
 
 import UIKit
 
-class TeamsViewController: UIViewController {
+class TeamsViewController: BaseViewController {
     private let game = Game.getInstance()
+    override var isBackNavigationEnabled: Bool { false }
     
     private let classicSnakeButton: SnakeButton = {
         let button = SnakeButton()

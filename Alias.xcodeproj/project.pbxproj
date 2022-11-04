@@ -30,6 +30,8 @@
 		9590D3E3290EAF670060197F /* StatsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590D3E2290EAF670060197F /* StatsCollectionView.swift */; };
 		9590D3EB290EBF470060197F /* TeamStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590D3EA290EBF470060197F /* TeamStatsView.swift */; };
 		9590D3EE290EDCC70060197F /* NextRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590D3ED290EDCC70060197F /* NextRoundView.swift */; };
+		959227AF2915291A005DF2B1 /* ForfeitRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959227AE2915291A005DF2B1 /* ForfeitRoundView.swift */; };
+		959227B129152FA0005DF2B1 /* ButtonWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959227B029152FA0005DF2B1 /* ButtonWithIcon.swift */; };
 		9592BEAD28E598F4004E1C6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEAC28E598F4004E1C6B /* AppDelegate.swift */; };
 		9592BEAF28E598F4004E1C6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEAE28E598F4004E1C6B /* SceneDelegate.swift */; };
 		9592BEB128E598F4004E1C6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEB028E598F4004E1C6B /* ViewController.swift */; };
@@ -84,6 +86,8 @@
 		9590D3E2290EAF670060197F /* StatsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCollectionView.swift; sourceTree = "<group>"; };
 		9590D3EA290EBF470060197F /* TeamStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStatsView.swift; sourceTree = "<group>"; };
 		9590D3ED290EDCC70060197F /* NextRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRoundView.swift; sourceTree = "<group>"; };
+		959227AE2915291A005DF2B1 /* ForfeitRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForfeitRoundView.swift; sourceTree = "<group>"; };
+		959227B029152FA0005DF2B1 /* ButtonWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithIcon.swift; sourceTree = "<group>"; };
 		9592BEA928E598F4004E1C6B /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9592BEAC28E598F4004E1C6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9592BEAE28E598F4004E1C6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				957CAB0C28F045EE00B972CD /* SnakeButton.swift */,
+				959227B029152FA0005DF2B1 /* ButtonWithIcon.swift */,
 			);
 			path = button;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 		9590D3E1290EAF430060197F /* bottom_sheet_views */ = {
 			isa = PBXGroup;
 			children = (
+				959227AD291528A1005DF2B1 /* forfeit_round */,
 				9590D3E4290EB0510060197F /* stats */,
 			);
 			path = bottom_sheet_views;
@@ -276,6 +282,14 @@
 				9590D3ED290EDCC70060197F /* NextRoundView.swift */,
 			);
 			path = next_round_view;
+			sourceTree = "<group>";
+		};
+		959227AD291528A1005DF2B1 /* forfeit_round */ = {
+			isa = PBXGroup;
+			children = (
+				959227AE2915291A005DF2B1 /* ForfeitRoundView.swift */,
+			);
+			path = forfeit_round;
 			sourceTree = "<group>";
 		};
 		9592BEA028E598F4004E1C6B = {
@@ -543,6 +557,7 @@
 				9592BEB728E598F4004E1C6B /* Alias.xcdatamodeld in Sources */,
 				959C3BA228EC45E7006E849B /* TableViewAdapter.swift in Sources */,
 				95750B5628EB04C9007CB897 /* HomeScreenController.swift in Sources */,
+				959227AF2915291A005DF2B1 /* ForfeitRoundView.swift in Sources */,
 				959C3B9928EC424D006E849B /* Rule.swift in Sources */,
 				957FCB842909372B0006FABC /* TimeAndPointsViewController.swift in Sources */,
 				9579B72029101B1B0058402E /* ArcadeGameViewController.swift in Sources */,
@@ -568,6 +583,7 @@
 				9592BECC28E5A196004E1C6B /* WordsDataBaseHelper.swift in Sources */,
 				9590D3E3290EAF670060197F /* StatsCollectionView.swift in Sources */,
 				9592BEAF28E598F4004E1C6B /* SceneDelegate.swift in Sources */,
+				959227B129152FA0005DF2B1 /* ButtonWithIcon.swift in Sources */,
 				959FDF53290FCB6D008FD0C9 /* BaseGameViewController.swift in Sources */,
 				95785934290BFAAE0035C8C6 /* OptionsLabel.swift in Sources */,
 				957CAB1028F0481E00B972CD /* TeamsViewController.swift in Sources */,

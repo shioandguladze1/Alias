@@ -85,7 +85,7 @@ class BaseGameViewController: UIViewController {
         bottomSheetController?.dismiss(animated: true)
         statsButton.setChildImageViewImage(image: UIImage(systemName: "arrow.up")!)
         statsButton.backgroundColor = GlobalColorProvider.getColor(color: .darkBlue).asUIColor()
-        statsLabel.text = "angarishi*translate*"
+        statsLabel.text = "score".localized()
     }
     
     private func setUpStatsButton(){
@@ -106,7 +106,7 @@ class BaseGameViewController: UIViewController {
         
         statsLabel.textColor = .white
         statsLabel.font = .systemFont(ofSize: 20)
-        statsLabel.text = "ანგარიში"
+        statsLabel.text = "score".localized()
         
         NSLayoutConstraint.activate([
             statsLabel.centerYAnchor.constraint(equalTo: statsButton.centerYAnchor),

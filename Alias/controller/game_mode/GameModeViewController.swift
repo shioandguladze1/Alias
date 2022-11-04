@@ -96,6 +96,15 @@ class GameModeViewController: BaseViewController {
      
     }
     
+    override func onBackPressed(sender: UIScreenEdgePanGestureRecognizer) {
+        if sender.state == .ended {
+            
+            navigationController?.popViewController(animated: true)
+            game?.reset()
+            
+        }
+    }
+    
     @objc func changeGameMode(_ sender: UITapGestureRecognizer? = nil){
         switch sender?.view?.tag{
             

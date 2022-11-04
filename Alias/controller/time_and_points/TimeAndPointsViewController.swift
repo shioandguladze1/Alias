@@ -12,6 +12,7 @@ class TimeAndPointsViewController: BaseViewController {
     private var arcadeButton: PaddingLabel?
     private var classicButton: PaddingLabel?
     private let game = Game.getInstance()
+    override var isBackNavigationEnabled: Bool { false }
     
     private let timeValueLabel: UILabel = {
         let label = UILabel()
@@ -260,9 +261,14 @@ class TimeAndPointsViewController: BaseViewController {
     }
     
     @objc private func startGame(){
+        guard let gameMode = game.gameMode else {
+            showAlertWithOkButton(title: "Error", body: "Game mode is not chosen!")
+            return
+        }
+        
         game.time = Int(timeSlider.value)
         game.points = Int(pointsSlider.value)
-        let target = game.gameMode == .Classic ? ClassicGameViewController() : ArcadeGameViewController()
+        let target = gameMode == .Classic ? ClassicGameViewController() : ArcadeGameViewController()
         navigationController?.pushViewController(target, animated: true)
     }
     
