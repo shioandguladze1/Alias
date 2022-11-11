@@ -7,8 +7,7 @@
 
 import UIKit
 
-class BaseGameViewController: UIViewController {
-
+class BaseGameViewController: BaseViewController, ForheitRoundViewDelegate {
     let game = Game.getInstance()
     private var count = Game.getInstance().time
     private var timer: Timer?
@@ -51,8 +50,11 @@ class BaseGameViewController: UIViewController {
     }()
     
     private let statCollectionView = StatsCollectionView()
+    private let forheitRoundView = ForfeitRoundView()
     private let bottomSheetFooterView = NextRoundView()
-    private var bottomSheetController: UIViewController?
+    private var statsBottomSheetController: UIViewController?
+    private var forheitRoundBottomSheetcontroller: UIViewController?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,7 @@ class BaseGameViewController: UIViewController {
         bottomSheetFooterView.onNextRoundButtonClick = {
             self.game.loadNextRound()
         }
+        forheitRoundView.delegate = self
     }
     
     private func setRoundObserver(){
@@ -76,13 +79,17 @@ class BaseGameViewController: UIViewController {
         game.roundLiveData.addObserver(observer: observer)
     }
     
+    private func setUpForheitView(){
+        
+    }
+    
     func prepareUIForNextRound(round: Round){
         setUpPointsLabel(points: round.team.points)
         setUpTeamNameLabel(teamName: round.team.name)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onTick), userInfo: nil, repeats: true)
         count = self.game.time
         countDownLabel.text = String(self.count)
-        bottomSheetController?.dismiss(animated: true)
+        statsBottomSheetController?.dismiss(animated: true)
         statsButton.setChildImageViewImage(image: UIImage(systemName: "arrow.up")!)
         statsButton.backgroundColor = GlobalColorProvider.getColor(color: .darkBlue).asUIColor()
         statsLabel.text = "score".localized()
@@ -199,9 +206,9 @@ class BaseGameViewController: UIViewController {
         let height = 48 + game.teams.count * 45 + (game.teams.count - 1) * 16
         
         if game.roundFinished {
-            bottomSheetController = showBottomSheetview(height: CGFloat(height), bottomView: statCollectionView, footerView: bottomSheetFooterView, footerHeight: 90)
+            statsBottomSheetController = showBottomSheetview(height: CGFloat(height), bottomView: statCollectionView, footerView: bottomSheetFooterView, footerHeight: 90)
         }else {
-            bottomSheetController = showBottomSheetview(height: CGFloat(height), bottomView: statCollectionView)
+            statsBottomSheetController = showBottomSheetview(height: CGFloat(height), bottomView: statCollectionView)
         }
     }
     
@@ -211,7 +218,12 @@ class BaseGameViewController: UIViewController {
     }
     
     func onFinishTimer(){
-        
+        timer?.invalidate()
+        statsBottomSheetController?.dismiss(animated: true)
+        statsButton.setChildImageViewImage(image: UIImage(systemName: "arrow.right")!)
+        statsLabel.text = "next_round".localized()
+        statsButton.backgroundColor = GlobalColorProvider.getColor(color: .subtleGreen).asUIColor()
+        openStats()
     }
     
     @objc private func onTick(){
@@ -219,13 +231,28 @@ class BaseGameViewController: UIViewController {
             count -= 1
             countDownLabel.text = String(count)
         }else {
-            timer?.invalidate()
-            bottomSheetController?.dismiss(animated: true)
             onFinishTimer()
-            statsButton.setChildImageViewImage(image: UIImage(systemName: "arrow.right")!)
-            statsLabel.text = "nextRound*translate*"
-            statsButton.backgroundColor = GlobalColorProvider.getColor(color: .subtleGreen).asUIColor()
-            openStats()
+        }
+    }
+    
+    func onForheitRound() {
+        onDismiss()
+        onFinishTimer()
+    }
+    
+    func onForheitGame() {
+        onDismiss()
+        navigationController?.popToRootViewController(animated: true)
+        game.reset()
+    }
+    
+    func onDismiss() {
+        forheitRoundBottomSheetcontroller?.dismiss(animated: true)
+    }
+    
+    override func onBackPressed(sender: UIScreenEdgePanGestureRecognizer) {
+        if sender.state == .ended {
+            forheitRoundBottomSheetcontroller = showBottomSheetview(height: 180, bottomView: forheitRoundView)
         }
     }
 

@@ -84,6 +84,7 @@ class ClassicGameViewController: BaseGameViewController {
     override func onFinishTimer() {
         setWordsAreClickable(areClickable: false)
         game.submitRound(teamPoints: currentTeamPoints)
+        super.onFinishTimer()
     }
     
     private func loadNextSetOfWords(){

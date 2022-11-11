@@ -99,10 +99,10 @@ class ArcadeGameViewController: BaseGameViewController {
     }
     
     override func onFinishTimer() {
-        super.onFinishTimer()
         increaseButton.isUserInteractionEnabled = false
         decreaseButton.isUserInteractionEnabled = false
         game.submitRound(teamPoints: currentTeamPoints)
+        super.onFinishTimer()
     }
     
     @objc func changeScore(target: UIView){
