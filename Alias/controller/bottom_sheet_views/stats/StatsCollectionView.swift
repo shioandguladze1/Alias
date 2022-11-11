@@ -25,7 +25,7 @@ class StatsCollectionView: UIView {
         initUI()
     }
     
-    func setData(teams: [Team], winningTeamIndex: Int){
+    func setData(teams: [Team]){
         if teamsStackView.arrangedSubviews.count != teams.count {
             teamsStackView.arrangedSubviews.forEach { view in
                 teamsStackView.removeArrangedSubview(view)
@@ -36,8 +36,6 @@ class StatsCollectionView: UIView {
             changeDataOnViews(teams: teams)
         }
         
-        (teamsStackView.arrangedSubviews[0] as? TeamStatsView)?.setUp(team: teams[winningTeamIndex])
-        (teamsStackView.arrangedSubviews[winningTeamIndex] as? TeamStatsView)?.setUp(team: teams[0])
     }
     
     private func createViews(teams: [Team]){

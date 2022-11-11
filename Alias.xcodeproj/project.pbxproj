@@ -23,6 +23,7 @@
 		957CAB1028F0481E00B972CD /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CAB0F28F0481E00B972CD /* TeamsViewController.swift */; };
 		957FCB842909372B0006FABC /* TimeAndPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957FCB832909372B0006FABC /* TimeAndPointsViewController.swift */; };
 		957FCB8A29093DFA0006FABC /* CircularSeekBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957FCB8929093DFA0006FABC /* CircularSeekBar.swift */; };
+		957FD8C4291E71EE00651005 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957FD8C3291E71EE00651005 /* ResultsViewController.swift */; };
 		9589D9D728E6FBFB005A48C5 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589D9D628E6FBFB005A48C5 /* Localization.swift */; };
 		958FD1E8290AB69700E8B2AE /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958FD1E7290AB69700E8B2AE /* Team.swift */; };
 		9590D3DC290E76250060197F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9590D3DB290E76250060197F /* Round.swift */; };
@@ -80,6 +81,7 @@
 		957CAB0F28F0481E00B972CD /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		957FCB832909372B0006FABC /* TimeAndPointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndPointsViewController.swift; sourceTree = "<group>"; };
 		957FCB8929093DFA0006FABC /* CircularSeekBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSeekBar.swift; sourceTree = "<group>"; };
+		957FD8C3291E71EE00651005 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		9589D9D628E6FBFB005A48C5 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		958FD1E7290AB69700E8B2AE /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		9590D3DB290E76250060197F /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		95750B5428EB04B8007CB897 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				957FD8C2291E71D500651005 /* results */,
 				9579B71E29101B0C0058402E /* arcade_game */,
 				959FDF51290FCB51008FD0C9 /* base_game_controller */,
 				9578592E290BE6060035C8C6 /* classic_game */,
@@ -256,6 +259,14 @@
 				957FCB8929093DFA0006FABC /* CircularSeekBar.swift */,
 			);
 			path = seek_bar;
+			sourceTree = "<group>";
+		};
+		957FD8C2291E71D500651005 /* results */ = {
+			isa = PBXGroup;
+			children = (
+				957FD8C3291E71EE00651005 /* ResultsViewController.swift */,
+			);
+			path = results;
 			sourceTree = "<group>";
 		};
 		9590D3E1290EAF430060197F /* bottom_sheet_views */ = {
@@ -573,6 +584,7 @@
 				9578206328E6F7BC004C1CE4 /* Extensions.swift in Sources */,
 				95750B5228EAFF1F007CB897 /* Observer.swift in Sources */,
 				9592BEC928E59FE1004E1C6B /* Word.swift in Sources */,
+				957FD8C4291E71EE00651005 /* ResultsViewController.swift in Sources */,
 				958FD1E8290AB69700E8B2AE /* Team.swift in Sources */,
 				959E81A528EF308F008D49B1 /* GlobalViewProvider.swift in Sources */,
 				959E81A328EF3063008D49B1 /* GameModeViewController.swift in Sources */,

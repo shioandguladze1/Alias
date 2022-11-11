@@ -65,10 +65,12 @@ class BaseGameViewController: BaseViewController, ForheitRoundViewDelegate {
         setUpStatsButton()
         setUpStatsLabel()
         game.loadNextRound()
+        game.startNextRound()
         bottomSheetFooterView.onNextRoundButtonClick = {
-            self.game.loadNextRound()
+            self.game.startNextRound()
         }
         forheitRoundView.delegate = self
+        game.onEndGame = navigateToResults
     }
     
     private func setRoundObserver(){
@@ -195,15 +197,15 @@ class BaseGameViewController: BaseViewController, ForheitRoundViewDelegate {
     
     @objc private func onStatsButtonClick(){
         if game.roundFinished {
-            game.loadNextRound()
+            game.startNextRound()
         }else {
             openStats()
         }
     }
     
     private func openStats(){
-        statCollectionView.setData(teams: game.teams, winningTeamIndex: game.winningTeamIndex)
-        let height = 48 + game.teams.count * 45 + (game.teams.count - 1) * 16
+        statCollectionView.setData(teams: game.getSortedTeams())
+        let height = 48 + game.getTeams().count * 45 + (game.getTeams().count - 1) * 16
         
         if game.roundFinished {
             statsBottomSheetController = showBottomSheetview(height: CGFloat(height), bottomView: statCollectionView, footerView: bottomSheetFooterView, footerHeight: 90)
@@ -224,6 +226,11 @@ class BaseGameViewController: BaseViewController, ForheitRoundViewDelegate {
         statsLabel.text = "next_round".localized()
         statsButton.backgroundColor = GlobalColorProvider.getColor(color: .subtleGreen).asUIColor()
         openStats()
+    }
+    
+    private func navigateToResults(){
+        let vc = ResultsViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func onTick(){

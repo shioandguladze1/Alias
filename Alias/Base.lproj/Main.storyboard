@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="-1597.1014492753625" y="96.428571428571431"/>
         </scene>
-        <!--Game Mode View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="zSv-N7-bEZ">
             <objects>
-                <viewController id="6iV-8h-rHm" customClass="GameModeViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6iV-8h-rHm" customClass="ResultsViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1i1-dH-cnm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

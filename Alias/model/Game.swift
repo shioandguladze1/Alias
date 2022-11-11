@@ -18,7 +18,9 @@ class Game{
             NotificationCenter.default.post(name: Game.notificationName, object: gameMode)
         }
     }
-    var teams: [Team] = []
+    private var teams: [Team] = []
+    private var sortedTeams = [Team]()
+    
     var bonusRoundTeams = [Team]()
     var time: Int = 10
     var points: Int = 3
@@ -26,7 +28,7 @@ class Game{
     var currentTeamIndex = -1
     var roundLiveData = LiveData<Round>()
     var roundFinished = true
-    var winningTeamIndex = 0
+    var onEndGame: ()-> Void = {}
     
     static let notificationName = NSNotification.Name("Game")
     static var instance: Game?
@@ -43,19 +45,36 @@ class Game{
         Self.instance = Game()
     }
     
+    func restart(){
+        roundFinished = true
+        currentRoundType = .RegularRound
+        currentTeamIndex = -1
+        bonusRoundTeams.removeAll()
+        sortedTeams = teams
+        roundLiveData = LiveData()
+        teams.forEach{
+            $0.isWinning = false
+            $0.points = 0
+        }
+    }
+    
     func submitRound(teamPoints: Int){
         teams[currentTeamIndex].points = teamPoints
         roundFinished = true
-        markWinningTeam()
+        sortTeams()
+        loadNextRound()
+    }
+    
+    func startNextRound(){
+        roundFinished = false
+        roundLiveData.setData(data: Round(type: currentRoundType, team: teams[currentTeamIndex]))
     }
     
     func loadNextRound(){
         let teams = currentRoundType == .RegularRound ? self.teams : bonusRoundTeams
-        roundFinished = false
         
         if currentTeamIndex < teams.count - 1{
             currentTeamIndex += 1
-            roundLiveData.setData(data: Round(type: currentRoundType, team: teams[currentTeamIndex]))
         }else if currentRoundType == .RegularRound {
             loadBonusRoundTeamsOrEndGame()
         }else{
@@ -63,23 +82,27 @@ class Game{
         }
     }
     
-    private func markWinningTeam(){
-        var maxPoints = -1
-        var winningTeamIndex = -1
-        
-        for i in 0..<teams.count {
-            let team = teams[i]
-            
-            if team.points > maxPoints {
-                winningTeamIndex = i
-                maxPoints = team.points
-            }
-            
-            team.isWinning = false
+    func setTeams(teams: [Team]){
+        self.teams = teams
+        self.sortedTeams = teams
+    }
+    
+    func getTeams()-> [Team]{
+        teams
+    }
+    
+    func getSortedTeams()-> [Team]{
+        sortedTeams
+    }
+    
+    private func sortTeams(){
+        sortedTeams = teams.sorted{
+            $0.isWinning = false
+            $1.isWinning = false
+            return $0.points > $1.points
         }
         
-        teams[winningTeamIndex].isWinning = true
-        self.winningTeamIndex = winningTeamIndex
+        sortedTeams[0].isWinning = true
     }
     
     private func checkBonusRoundResults(){
@@ -98,7 +121,7 @@ class Game{
         }
         
         if nextBonusRoundTeams.count == 1 {
-            endGame()
+            onEndGame()
         } else {
             bonusRoundTeams = nextBonusRoundTeams
             currentTeamIndex = -1
@@ -115,7 +138,7 @@ class Game{
         }
         
         if bonusRoundTeams.count == 1 {
-            endGame()
+            onEndGame()
         } else if bonusRoundTeams.count >= 0{
             currentTeamIndex = -1
             loadNextRound()
@@ -124,12 +147,6 @@ class Game{
                 currentRoundType = .BonusRound
             }
         }
-    }
-    
-    func endGame(){
-        print("game finished")
-        let ragaca: String? = nil
-        print(ragaca!)
     }
     
 }

@@ -168,7 +168,7 @@ class TeamsViewController: BaseViewController {
             
         }
         
-        game.teams = teams
+        game.setTeams(teams: teams)
     }
     
     @objc private func navigateToTimeAndPoints(){
