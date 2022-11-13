@@ -262,7 +262,7 @@ class TimeAndPointsViewController: BaseViewController {
     
     @objc private func startGame(){
         guard let gameMode = game.gameMode else {
-            showAlertWithOkButton(title: "Error", body: "Game mode is not chosen!")
+            showAlertWithOkButton(title: "error".localized(), body: "choose_game_mode".localized())
             return
         }
         

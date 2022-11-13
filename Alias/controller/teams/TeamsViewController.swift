@@ -172,7 +172,7 @@ class TeamsViewController: BaseViewController {
     }
     
     @objc private func navigateToTimeAndPoints(){
-        (parent as? ViewController)?.navigateForward(index: 2)
+        (parent as? PagerController)?.navigateForward(index: 2)
     }
     
     @objc private func addTeams(){

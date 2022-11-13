@@ -48,7 +48,7 @@ class HomeScreenController: BaseViewController {
     }
     
     @IBAction func startGame(_ sender: Any) {
-        navigationController?.pushViewController(ViewController(transitionStyle: .scroll, navigationOrientation: .horizontal), animated: true)
+        navigationController?.pushViewController(PagerController(transitionStyle: .scroll, navigationOrientation: .horizontal), animated: true)
     }
     
     func setUpDropDown(){

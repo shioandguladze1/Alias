@@ -35,7 +35,7 @@
 		959227B129152FA0005DF2B1 /* ButtonWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959227B029152FA0005DF2B1 /* ButtonWithIcon.swift */; };
 		9592BEAD28E598F4004E1C6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEAC28E598F4004E1C6B /* AppDelegate.swift */; };
 		9592BEAF28E598F4004E1C6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEAE28E598F4004E1C6B /* SceneDelegate.swift */; };
-		9592BEB128E598F4004E1C6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEB028E598F4004E1C6B /* ViewController.swift */; };
+		9592BEB128E598F4004E1C6B /* PagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEB028E598F4004E1C6B /* PagerController.swift */; };
 		9592BEB428E598F4004E1C6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9592BEB228E598F4004E1C6B /* Main.storyboard */; };
 		9592BEB728E598F4004E1C6B /* Alias.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9592BEB528E598F4004E1C6B /* Alias.xcdatamodeld */; };
 		9592BEB928E598F6004E1C6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9592BEB828E598F6004E1C6B /* Assets.xcassets */; };
@@ -93,7 +93,7 @@
 		9592BEA928E598F4004E1C6B /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9592BEAC28E598F4004E1C6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9592BEAE28E598F4004E1C6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9592BEB028E598F4004E1C6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9592BEB028E598F4004E1C6B /* PagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerController.swift; sourceTree = "<group>"; };
 		9592BEB328E598F4004E1C6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9592BEB628E598F4004E1C6B /* Alias.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alias.xcdatamodel; sourceTree = "<group>"; };
 		9592BEB828E598F6004E1C6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +168,7 @@
 		95750B5428EB04B8007CB897 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				958B594029210B7C00A9F5A3 /* pager */,
 				957FD8C2291E71D500651005 /* results */,
 				9579B71E29101B0C0058402E /* arcade_game */,
 				959FDF51290FCB51008FD0C9 /* base_game_controller */,
@@ -269,6 +270,14 @@
 			path = results;
 			sourceTree = "<group>";
 		};
+		958B594029210B7C00A9F5A3 /* pager */ = {
+			isa = PBXGroup;
+			children = (
+				9592BEB028E598F4004E1C6B /* PagerController.swift */,
+			);
+			path = pager;
+			sourceTree = "<group>";
+		};
 		9590D3E1290EAF430060197F /* bottom_sheet_views */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,7 +341,6 @@
 				9592BEC328E5990B004E1C6B /* raw */,
 				9592BEAC28E598F4004E1C6B /* AppDelegate.swift */,
 				9592BEAE28E598F4004E1C6B /* SceneDelegate.swift */,
-				9592BEB028E598F4004E1C6B /* ViewController.swift */,
 				9592BEB228E598F4004E1C6B /* Main.storyboard */,
 				9592BEB828E598F6004E1C6B /* Assets.xcassets */,
 				9592BEBA28E598F6004E1C6B /* LaunchScreen.storyboard */,
@@ -574,7 +582,7 @@
 				9579B72029101B1B0058402E /* ArcadeGameViewController.swift in Sources */,
 				9590D3EE290EDCC70060197F /* NextRoundView.swift in Sources */,
 				959C3B9F28EC429E006E849B /* RulesTableViewCell.swift in Sources */,
-				9592BEB128E598F4004E1C6B /* ViewController.swift in Sources */,
+				9592BEB128E598F4004E1C6B /* PagerController.swift in Sources */,
 				959E81A728EF4063008D49B1 /* Game.swift in Sources */,
 				959C3B9728EC41FA006E849B /* RulesViewController.swift in Sources */,
 				9578205528E6E73E004C1CE4 /* Theme.swift in Sources */,
@@ -763,8 +771,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alias/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -779,6 +788,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = n.Alias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -791,8 +801,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alias/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -807,6 +818,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = n.Alias;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

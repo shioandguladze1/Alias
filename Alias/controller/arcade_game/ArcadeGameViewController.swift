@@ -28,12 +28,19 @@ class ArcadeGameViewController: BaseGameViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    private let sceneImageView: UIImageView = {
+        let imageview = UIImageView()
+        imageview.translatesAutoresizingMaskIntoConstraints = false
+        return imageview
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpWordView()
         setUpIncreaseButton()
         setUpDecreaseButton()
+        setUpSceneImageView()
     }
     
     override func prepareUIForNextRound(round: Round) {
@@ -54,6 +61,19 @@ class ArcadeGameViewController: BaseGameViewController {
             ],
             locations: [0.4]
         )
+    }
+    
+    private func setUpSceneImageView(){
+        view.addSubview(sceneImageView)
+        
+        sceneImageView.image = UIImage(named: "arcade_scene")
+        
+        NSLayoutConstraint.activate([
+            sceneImageView.leftAnchor.constraint(equalTo: decreaseButton.leftAnchor, constant: 16),
+            sceneImageView.rightAnchor.constraint(equalTo: increaseButton.rightAnchor, constant: -16),
+            sceneImageView.topAnchor.constraint(equalTo: decreaseButton.bottomAnchor, constant: 16),
+            sceneImageView.heightAnchor.constraint(equalTo: sceneImageView.widthAnchor, multiplier: 0.8)
+        ])
     }
     
     private func setUpWordView(){

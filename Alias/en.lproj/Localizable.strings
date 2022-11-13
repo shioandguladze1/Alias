@@ -19,6 +19,10 @@
 "rules_twelveth"="Bonus Rounds held until the winner by total points appears";
 "rules_thirteenth"="Stuck?";
 "rules_fourteenth"="If Stuck, Round can be Skipped. Points are Saved";
+"ensure_forfeit" = "Do you want to forfeit round?";
+"forfeit_game" = "Forfeit Game";
+"choose_game_mode" = "Choose Game Mode";
+"error" = "Error";
 
 "classic" = "Classic";
 "arcade" = "Arcade";
@@ -31,3 +35,5 @@
 
 "score" = "Score";
 "next_round" = "Start Next Round";
+
+"results" = "Result";

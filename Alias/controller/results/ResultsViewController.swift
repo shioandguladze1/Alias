@@ -10,6 +10,9 @@ import UIKit
 
 class ResultsViewController: BaseViewController {
     private let game = Game.getInstance()
+    override var isBackNavigationEnabled: Bool {
+        false
+    }
     
     private let resultsLabel: UILabel = {
         let label = UILabel()
@@ -20,7 +23,6 @@ class ResultsViewController: BaseViewController {
     private let teamsStackView: UIStackView = {
         let stackview = UIStackView()
         stackview.translatesAutoresizingMaskIntoConstraints = false
-        stackview.axis = .vertical
         return stackview
     }()
     
@@ -102,6 +104,8 @@ class ResultsViewController: BaseViewController {
     private func setUpResultsCollectionView(){
         view.addSubview(teamsStackView)
         
+        teamsStackView.axis = .vertical
+        teamsStackView.spacing = 16
         arrangeTeams(teams: game.getSortedTeams())
         
         NSLayoutConstraint.activate([
@@ -116,7 +120,7 @@ class ResultsViewController: BaseViewController {
         
         resultsLabel.textColor = .white
         resultsLabel.font = .boldSystemFont(ofSize: 30)
-        resultsLabel.text = "Results"
+        resultsLabel.text = "results".localized()
         
         NSLayoutConstraint.activate([
             resultsLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height * 0.1),

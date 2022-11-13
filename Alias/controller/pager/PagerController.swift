@@ -8,7 +8,7 @@
 import UIKit
 import SQLite3
 
-class ViewController: UIPageViewController {
+class PagerController: UIPageViewController {
     private var controllers = [UIViewController]()
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class ViewController: UIPageViewController {
     
 }
 
-extension ViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource{
+extension PagerController: UIPageViewControllerDelegate, UIPageViewControllerDataSource{
  
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let index = controllers.firstIndex(of: viewController) ?? -1

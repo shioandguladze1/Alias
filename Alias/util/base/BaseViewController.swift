@@ -30,10 +30,14 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        observer = Observer{_ in self.setTexts() }
-        localizationLiveData.addObserver(observer: observer!)
         classKey = String(describing: self)
         setUpBackGestureRecognizer()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        observer = Observer{_ in self.setTexts() }
+        localizationLiveData.addObserver(observer: observer!)
     }
     
     override func viewDidDisappear(_ animated: Bool) {

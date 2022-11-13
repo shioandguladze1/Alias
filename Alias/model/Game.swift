@@ -28,6 +28,7 @@ class Game{
     var currentTeamIndex = -1
     var roundLiveData = LiveData<Round>()
     var roundFinished = true
+    var gameFinished = false
     var onEndGame: ()-> Void = {}
     
     static let notificationName = NSNotification.Name("Game")
@@ -52,6 +53,7 @@ class Game{
         bonusRoundTeams.removeAll()
         sortedTeams = teams
         roundLiveData = LiveData()
+        gameFinished = false
         teams.forEach{
             $0.isWinning = false
             $0.points = 0
@@ -122,6 +124,7 @@ class Game{
         
         if nextBonusRoundTeams.count == 1 {
             onEndGame()
+            gameFinished = true
         } else {
             bonusRoundTeams = nextBonusRoundTeams
             currentTeamIndex = -1
@@ -139,6 +142,7 @@ class Game{
         
         if bonusRoundTeams.count == 1 {
             onEndGame()
+            gameFinished = true
         } else if bonusRoundTeams.count >= 0{
             currentTeamIndex = -1
             loadNextRound()

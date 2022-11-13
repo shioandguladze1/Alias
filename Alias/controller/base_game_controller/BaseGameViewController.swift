@@ -81,10 +81,6 @@ class BaseGameViewController: BaseViewController, ForheitRoundViewDelegate {
         game.roundLiveData.addObserver(observer: observer)
     }
     
-    private func setUpForheitView(){
-        
-    }
-    
     func prepareUIForNextRound(round: Round){
         setUpPointsLabel(points: round.team.points)
         setUpTeamNameLabel(teamName: round.team.name)
@@ -204,6 +200,10 @@ class BaseGameViewController: BaseViewController, ForheitRoundViewDelegate {
     }
     
     private func openStats(){
+        guard !game.gameFinished else {
+            return
+        }
+        
         statCollectionView.setData(teams: game.getSortedTeams())
         let height = 48 + game.getTeams().count * 45 + (game.getTeams().count - 1) * 16
         
@@ -222,6 +222,7 @@ class BaseGameViewController: BaseViewController, ForheitRoundViewDelegate {
     func onFinishTimer(){
         timer?.invalidate()
         statsBottomSheetController?.dismiss(animated: true)
+        forheitRoundBottomSheetcontroller?.dismiss(animated: true)
         statsButton.setChildImageViewImage(image: UIImage(systemName: "arrow.right")!)
         statsLabel.text = "next_round".localized()
         statsButton.backgroundColor = GlobalColorProvider.getColor(color: .subtleGreen).asUIColor()
@@ -259,7 +260,7 @@ class BaseGameViewController: BaseViewController, ForheitRoundViewDelegate {
     
     override func onBackPressed(sender: UIScreenEdgePanGestureRecognizer) {
         if sender.state == .ended {
-            forheitRoundBottomSheetcontroller = showBottomSheetview(height: 180, bottomView: forheitRoundView)
+            forheitRoundBottomSheetcontroller = showBottomSheetview(height: 200, bottomView: forheitRoundView)
         }
     }
 

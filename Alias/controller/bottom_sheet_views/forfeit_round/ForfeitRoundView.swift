@@ -72,7 +72,8 @@ class ForfeitRoundView: UIView{
         messageLabel.textColor = .white
         messageLabel.font = .systemFont(ofSize: 24)
         messageLabel.textAlignment = .center
-        messageLabel.text = "do you want to forfeit round?"
+        messageLabel.text = "ensure_forfeit".localized()
+        messageLabel.numberOfLines = 0
         
         NSLayoutConstraint.activate([
             messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
@@ -119,7 +120,7 @@ class ForfeitRoundView: UIView{
         addSubview(forheitGameButton)
         
         forheitGameButton.layer.cornerRadius = 5
-        forheitGameButton.setText(text: "Forheit Game")
+        forheitGameButton.setText(text: "forfeit_game".localized())
         forheitGameButton.setIcon(image: UIImage(systemName: "house.fill"))
         
         let gr = UITapGestureRecognizer(target: self, action: #selector(onForheitGame))

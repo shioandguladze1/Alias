@@ -116,7 +116,7 @@ class GameModeViewController: BaseViewController {
             break
         }
         
-        (parent as? ViewController)?.navigateForward(index: 1)
+        (parent as? PagerController)?.navigateForward(index: 1)
     }
     
     @objc private func changeButtonColors(){
